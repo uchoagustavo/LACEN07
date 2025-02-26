@@ -1,6 +1,6 @@
 # 🏥 LACEN07  
 
-Projeto desenvolvido na disciplina **Residência de Software I**, em parceria com a **Fundação de Saúde Parreiras Horta**. O objetivo é criar o **FrontEnd** para o website do **Laboratório Central - LACEN**.  
+Projeto desenvolvido na disciplina **Residência de Software I**, em parceria com a **Fundação de Saúde Parreiras Horta - FSPH**. O objetivo é criar o **FrontEnd** para o website do **Laboratório Central - LACEN**.  
 
 ## 🚀 Tecnologias Utilizadas  
 
