@@ -183,6 +183,7 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .grid-nav {
+        margin-left: 0%;
         grid-template-columns: 1fr;
         text-align: center;
     }
