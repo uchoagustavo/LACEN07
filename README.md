@@ -6,8 +6,8 @@ Projeto desenvolvido na disciplina **Residência de Software I**, em parceria co
 
 - ⚡ **HTML5**  
 - 🎨 **CSS3**  
-- 🛠️ **JavaScript (Vanilla JS)**  
-- 🧐 *Possível uso de TypeScript*  
+- 🛠️ **VueJS**  
+- #️⃣ **TypeScript**  
 
 ## ▶️ Como Rodar o Projeto  
 
