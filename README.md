@@ -7,7 +7,7 @@ Projeto desenvolvido na disciplina **Residência de Software I**, em parceria co
 - ⚡ **HTML5**  
 - 🎨 **CSS3**  
 - 🛠️ **VueJS**  
-- #️⃣ **TypeScript**  
+- #️⃣ **JavaScript**  
 
 ## ▶️ Como Rodar o Projeto  
 
