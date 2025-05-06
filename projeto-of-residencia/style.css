@@ -1,0 +1,640 @@
+.info-profissionais {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .info-profissionais .div {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 1920px;
+    height: 1958px;
+    position: relative;
+  }
+  
+  .info-profissionais .overlap-group {
+    position: absolute;
+    width: 1922px;
+    height: 1904px;
+    top: 54px;
+    left: 0;
+  }
+  
+  .info-profissionais .laboratrio-de {
+    position: absolute;
+    width: 1920px;
+    height: 1896px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .info-profissionais .rectangle {
+    position: absolute;
+    width: 429px;
+    height: 830px;
+    top: 295px;
+    left: 191px;
+    background-color: #0a3c79;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+  
+  .info-profissionais .rectangle-2 {
+    position: absolute;
+    width: 429px;
+    height: 830px;
+    top: 295px;
+    left: 1289px;
+    background-color: #0a3c79;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+  
+  .info-profissionais .rectangle-3 {
+    position: absolute;
+    width: 429px;
+    height: 830px;
+    top: 295px;
+    left: 744px;
+    background-color: #0a3c79;
+    border-radius: 20px;
+    opacity: 0.9;
+  }
+  
+  .info-profissionais .rectangle-4 {
+    position: absolute;
+    width: 327px;
+    height: 59px;
+    top: 1133px;
+    left: 242px;
+    background-color: #0a3c79;
+    border-radius: 40px;
+    opacity: 0.9;
+  }
+  
+  .info-profissionais .rectangle-5 {
+    position: absolute;
+    width: 327px;
+    height: 59px;
+    top: 1139px;
+    left: 1348px;
+    background-color: #0a3c79;
+    border-radius: 40px;
+    opacity: 0.9;
+  }
+  
+  .info-profissionais .img {
+    position: absolute;
+    width: 327px;
+    height: 59px;
+    top: 1135px;
+    left: 798px;
+  }
+  
+  .info-profissionais .text-wrapper {
+    position: absolute;
+    width: 455px;
+    top: 1144px;
+    left: 287px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-2 {
+    top: 1144px;
+    left: 843px;
+    position: absolute;
+    width: 452px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-3 {
+    top: 1146px;
+    left: 1391px;
+    position: absolute;
+    width: 452px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .conrado {
+    position: absolute;
+    width: 183px;
+    height: 183px;
+    top: 313px;
+    left: 759px;
+    object-fit: cover;
+  }
+  
+  .info-profissionais .charles-leal-m {
+    position: absolute;
+    width: 198px;
+    height: 198px;
+    top: 313px;
+    left: 196px;
+    object-fit: cover;
+  }
+  
+  .info-profissionais .footer {
+    position: absolute;
+    width: 1920px;
+    height: 322px;
+    top: 1582px;
+    left: 0;
+    background-color: #164194;
+  }
+  
+  .info-profissionais .logo {
+    position: absolute;
+    width: 425px;
+    height: 90px;
+    top: 50px;
+    left: 106px;
+    object-fit: cover;
+  }
+  
+  .info-profissionais .funda-o-de-sa-de {
+    position: absolute;
+    top: 160px;
+    left: 106px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .endereo-footer {
+    position: absolute;
+    width: 507px;
+    height: 27px;
+    top: 206px;
+    left: 106px;
+  }
+  
+  .info-profissionais .endereo-icon {
+    position: absolute;
+    width: 21px;
+    height: 19px;
+    top: 8px;
+    left: 0;
+    background-image: url(https://c.animaapp.com/oIuyKuNo/img/geo-alt-fill.svg);
+    background-size: 100% 100%;
+  }
+  
+  .info-profissionais .p {
+    position: absolute;
+    width: 471px;
+    top: 9px;
+    left: 27px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-4 {
+    position: absolute;
+    top: 75px;
+    left: 721px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .info-profissionais .telefone-footer {
+    position: absolute;
+    width: 245px;
+    height: 35px;
+    top: 161px;
+    left: 715px;
+  }
+  
+  .info-profissionais .telefone-icon {
+    position: absolute;
+    width: 19px;
+    height: 17px;
+    top: 9px;
+    left: 8px;
+    background-image: url(https://c.animaapp.com/oIuyKuNo/img/telephone-fill.svg);
+    background-size: 100% 100%;
+  }
+  
+  .info-profissionais .telefone {
+    position: absolute;
+    width: 191px;
+    top: 8px;
+    left: 42px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .span {
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  
+  .info-profissionais .instagram-footer {
+    position: absolute;
+    width: 129px;
+    height: 35px;
+    top: 199px;
+    left: 714px;
+  }
+  
+  .info-profissionais .telefone-icon-2 {
+    height: 19px;
+    top: 8px;
+    left: 10px;
+    background-image: url(https://c.animaapp.com/oIuyKuNo/img/instagram.svg);
+    position: absolute;
+    width: 19px;
+    background-size: 100% 100%;
+  }
+  
+  .info-profissionais .text-wrapper-5 {
+    position: absolute;
+    width: 72px;
+    top: 7px;
+    left: 41px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .email-footer {
+    position: absolute;
+    width: 286px;
+    height: 35px;
+    top: 123px;
+    left: 721px;
+  }
+  
+  .info-profissionais .email-icon {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 9px;
+    left: 4px;
+    background-image: url(https://c.animaapp.com/oIuyKuNo/img/envelope-fill.svg);
+    background-size: 100% 100%;
+  }
+  
+  .info-profissionais .text-wrapper-6 {
+    position: absolute;
+    width: 249px;
+    top: 8px;
+    left: 37px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-7 {
+    position: absolute;
+    width: 206px;
+    top: 316px;
+    left: 399px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-8 {
+    position: absolute;
+    width: 182px;
+    top: 311px;
+    left: 957px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-9 {
+    position: absolute;
+    width: 211px;
+    top: 395px;
+    left: 399px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-10 {
+    position: absolute;
+    width: 338px;
+    top: 427px;
+    left: 951px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .rectangle-6 {
+    position: absolute;
+    width: 1137px;
+    height: 108px;
+    top: 49px;
+    left: 26px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    opacity: 0.5;
+  }
+  
+  .info-profissionais .graduado-em-gest-o-p {
+    position: absolute;
+    width: 401px;
+    top: 667px;
+    left: 209px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .doutor-e-mestre-em {
+    position: absolute;
+    width: 385px;
+    top: 667px;
+    left: 760px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .rectangle-7 {
+    position: absolute;
+    width: 1920px;
+    height: 139px;
+    top: 34px;
+    left: 2px;
+    background-color: #0a3c79;
+  }
+  
+  .info-profissionais .text-wrapper-11 {
+    position: absolute;
+    top: 78px;
+    left: 264px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 52px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .info-profissionais .luciana-deda {
+    position: absolute;
+    width: 185px;
+    height: 156px;
+    top: 313px;
+    left: 1297px;
+    object-fit: cover;
+  }
+  
+  .info-profissionais .text-wrapper-12 {
+    position: absolute;
+    width: 219px;
+    top: 312px;
+    left: 1492px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-13 {
+    position: absolute;
+    top: 430px;
+    left: 1486px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .info-profissionais .text-wrapper-14 {
+    position: absolute;
+    width: 352px;
+    top: 667px;
+    left: 1306px;
+    font-family: "Montserrat", Helvetica;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .header {
+    position: static;
+    width: 1920px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    background-color: #0291d3;
+  }
+  
+  .info-profissionais .frame {
+    position: absolute;
+    width: 1154px;
+    height: 41px;
+    top: 0;
+    left: 766px;
+  }
+  
+  .info-profissionais .instagram-alt {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    left: 1084px;
+  }
+  
+  .info-profissionais .linkedin {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    left: 1046px;
+  }
+  
+  .info-profissionais .facebook {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    left: 1122px;
+  }
+  
+  .info-profissionais .telefone-footer-2 {
+    position: absolute;
+    width: 245px;
+    height: 35px;
+    top: 3px;
+    left: 781px;
+  }
+  
+  .info-profissionais .telefone-icon-3 {
+    height: 17px;
+    top: 10px;
+    left: 17px;
+    background-image: url(https://c.animaapp.com/oIuyKuNo/img/telephone-fill-1.svg);
+    position: absolute;
+    width: 19px;
+    background-size: 100% 100%;
+  }
+  
+  .info-profissionais .span-wrapper {
+    position: absolute;
+    width: 191px;
+    top: 9px;
+    left: 42px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffffcc;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .text-wrapper-15 {
+    position: absolute;
+    top: 10px;
+    left: 605px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .info-profissionais .text-wrapper-16 {
+    position: absolute;
+    width: 73px;
+    top: 9px;
+    left: 514px;
+    font-family: "Roboto", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .info-profissionais .toggle-dark-mode {
+    position: absolute;
+    width: 70px;
+    height: 29px;
+    top: 6px;
+    left: 386px;
+  }
+  
+  .info-profissionais .menu-barra {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: 6px;
+    left: 10px;
+    background-color: #0a3c79;
+    border-radius: 19.5px;
+  }
+  
+  .info-profissionais .bars {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 4px;
+    left: 4px;
+  }
+  
+  .info-profissionais .libras-logo-liguagem {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 198px;
+    left: 1817px;
+    object-fit: cover;
+  }
+  
+ 
+
+
+
+
+  
+  
