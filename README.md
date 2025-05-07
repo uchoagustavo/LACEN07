@@ -18,4 +18,5 @@ git clone https://github.com/seu-usuario/LACEN07.git
 # 📂 Entre no diretório  
 cd LACEN07  
 
-# 🏃‍♂️ Abra o arquivo index.html no navegador  
+# 🏃‍♂️ Rode o código via npm
+npm run dev  
