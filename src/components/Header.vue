@@ -15,7 +15,7 @@
     <li>
       <a href="https://wa.me/557932346007" target="_blank" rel="noopener noreferrer" aria-label="Contato pelo WhatsApp">
         <img class="img-contato" src="/assets/img/telephone-fill.png" alt="Telefone" />
-        +55 (79) 3234-6007
+        (79) 3234-6007
       </a>
     </li>
 
