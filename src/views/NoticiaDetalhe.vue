@@ -1,4 +1,7 @@
 <template>
+
+<Libras />
+
   <div class="noticia-container">
     <h1>{{ noticia.titulo }}</h1>
     <p class="meta">

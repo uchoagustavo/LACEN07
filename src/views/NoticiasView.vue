@@ -1,4 +1,7 @@
 <template>
+
+<Libras />
+
   <div class="noticias-view">
     <div class="header-opcoes">
       <h1 class="titulo-pagina">Notícias</h1>

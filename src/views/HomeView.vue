@@ -23,6 +23,9 @@ export default {
 
 
 <template>
+  
+  <Libras />
+
   <div>
     <Header />
   </div>
@@ -51,7 +54,7 @@ export default {
 
   <!-- Cards Notícias-->
   <div class="main-card">
-    <div class="card" v-for="(noticia, index) in noticias.slice(0, 3)" :key="noticia.id">
+    <div class="card" v-for="(noticia) in noticias.slice(0, 3)" :key="noticia.id">
       <h3 class="cabecalho-noticias">
         <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN" />
         <span class="titulo">NOTÍCIAS</span>
@@ -144,7 +147,6 @@ export default {
 
   </div>
 
-  <Libras />
 
 </template>
 

@@ -16,6 +16,9 @@
 </script>
 
 <template>
+
+<Libras />
+
   <h1>
     Hello
   </h1>
