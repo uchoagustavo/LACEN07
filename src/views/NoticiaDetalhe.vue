@@ -1,6 +1,5 @@
 <template>
-
-<Libras />
+  <Libras />
 
   <div class="noticia-container">
     <h1>{{ noticia.titulo }}</h1>
@@ -30,20 +29,24 @@
 </template>
 
 <script>
-import noticias from '@/assets/data/noticias.json'
+  import noticias from '@/assets/data/noticias.json'
+  import Libras from '@/components/Libras.vue'
 
-export default {
-  name: 'NoticiaDetalhe',
-  data() {
-    return {
-      noticia: null
+  export default {
+    name: 'NoticiaDetalhe',
+    components: {
+      Libras,
+    },
+    data() {
+      return {
+        noticia: null
+      }
+    },
+    created() {
+      const id = parseInt(this.$route.params.id)
+      this.noticia = noticias.find(n => n.id === id)
     }
-  },
-  created() {
-    const id = parseInt(this.$route.params.id)
-    this.noticia = noticias.find(n => n.id === id)
   }
-}
 </script>
 
 

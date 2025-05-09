@@ -1,7 +1,5 @@
 <script>
 import TemaToggle from '@/components/TemaToggle.vue'
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
 import Libras from '@/components/Libras.vue'
 import noticiasJson from '@/assets/data/noticias.json'
 
@@ -9,8 +7,6 @@ export default {
   name: 'HomeView',
   components: {
     TemaToggle,
-    Header,
-    Footer,
     Libras,
   },
   data() {
@@ -23,12 +19,8 @@ export default {
 
 
 <template>
-  
-  <Libras />
 
-  <div>
-    <Header />
-  </div>
+  <Libras />
 
   <div>
     <TemaToggle />
@@ -139,11 +131,6 @@ export default {
       </div>
     </div>
     <div class="branco-bar"></div>
-
-    <!--Footer-->
-    <div>
-      <Footer />
-    </div>
 
   </div>
 

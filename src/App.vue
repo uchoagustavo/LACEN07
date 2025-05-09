@@ -1,15 +1,22 @@
 <template>
-  <router-view />
+  <div id="app">
+    <Header />
+    <main>
+      <router-view />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script>
-import { RouterLink, RouterView } from 'vue-router'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    RouterLink,
-    RouterView
+    Header,
+    Footer
   }
 }
 </script>
@@ -21,9 +28,19 @@ export default {
   box-sizing: border-box;
 }
 
-html, body, #app {
+html, body {
   width: 100%;
   height: 100%;
   background-color: #fff;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 </style>

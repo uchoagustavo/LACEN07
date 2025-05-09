@@ -1,6 +1,6 @@
 <template>
 
-<Libras />
+  <Libras />
 
   <div class="noticias-view">
     <div class="header-opcoes">
@@ -49,17 +49,21 @@
 </template>
 
 <script>
-import noticiasData from '@/assets/data/noticias.json'
+  import noticiasData from '@/assets/data/noticias.json'
+  import Libras from '@/components/Libras.vue'
 
-export default {
-  name: 'NoticiasView',
-  data() {
-    return {
-      noticias: noticiasData,
-      modoGrade: true
+  export default {
+    name: 'NoticiasView',
+    components: {
+      Libras,
+    },
+    data() {
+      return {
+        noticias: noticiasData,
+        modoGrade: true
+      }
     }
   }
-}
 </script>
 
 <style scoped>
