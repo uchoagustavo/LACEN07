@@ -36,109 +36,98 @@ export default{
 </template>
 
 <style scoped>
-  .rodape {
-    background-color: #002f5f;
-    color: white;
-    padding: 30px 0;
-    font-size: 14px;
-    width: 100%;
-  }
+.rodape {
+  background-color: #002f5f;
+  color: white;
+  padding: 30px 0;
+  font-size: 14px;
+  width: 100%;
+}
 
+.rodape .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.institucional,
+.fale-conosco {
+  flex: 1 1 300px;
+}
+
+.institucional-texto {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.logo21 {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 10px;
+}
+
+.endereco {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.endereco-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.titulo-fale-conosco {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contatos-email,
+.contatos-telefone,
+.contato-instagram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.email-icon,
+.telefone-icon,
+.instagram-icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
   .rodape .container {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
 
-  .institucional {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .logo21 {
-    width: 450px;
-    margin-bottom: 10px;
-  }
-
-  .institucional-texto {
-    margin-bottom: 10px;
+  .institucional,
+  .fale-conosco {
+    text-align: center;
+    flex: 1 1 auto;
   }
 
   .endereco {
-    display: flex;
-    align-items: start;
-    gap: 10px;
-  }
-
-  .endereco-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .fale-conosco {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .titulo-fale-conosco {
-    font-size: 18px;
-    margin-bottom: 10px;
+    justify-content: center;
   }
 
   .contatos-email,
   .contatos-telefone,
   .contato-instagram {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    justify-content: center;
   }
 
-  .email-icon,
-  .telefone-icon,
-  .instagram-icon {
-    width: 18px;
-    height: 18px;
+  .logo21 {
+    margin: 0 auto 20px;
   }
-
-  @media (max-width: 768px) {
-    .rodape {
-      grid-template-columns: 1fr;
-      height: auto;
-      padding: 20px 0;
-      gap: 0;
-      text-align: center;
-    }
-
-    .endereco {
-      justify-content: center;
-    }
-
-    .endereco-icon {
-      margin-left: 0;
-    }
-
-    .contatos-email,
-    .contatos-telefone,
-    .contato-instagram {
-      justify-content: center;
-    }
-
-    .email-icon,
-    .telefone-texto,
-    .instagram-icon,
-    .instagram-texto {
-      margin-top: 10px;
-    }
-
-    .institucional-texto {
-      margin-left: 0;
-      padding: 10px 20px;
-    }
-
-    .logo21 {
-      margin: 0 auto 20px;
-    }
-  }
+}
 </style>
+

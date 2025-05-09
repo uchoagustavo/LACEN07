@@ -2,6 +2,7 @@
   import TemaToggle from '@/components/TemaToggle.vue'
   import Header from '@/components/Header.vue'
   import Footer from '@/components/Footer.vue'
+  import Libras from '@/components/Libras.vue'
 
   export default {
     name: 'HomeView',
@@ -9,6 +10,7 @@
       TemaToggle,
       Header,
       Footer,
+      Libras,
     }
 }
 </script>
@@ -52,7 +54,7 @@
         <p class="conteudo-texto">Dr. Luís da Silva é homenageado durante ação de identificação de amostras
           animais no LACEN/Se,</p>
       </div>
-      <a class="botao-card" href="/NoticiasView.vue"> SAIBA MAIS</a>
+      <a class="botao-card" href="/noticias"> SAIBA MAIS</a>
 
     </div>
     <div class="card card2">
@@ -97,7 +99,7 @@
           monitoramento
           epidemiológico e a saúde pública no estado.</p>
         <div class="botoes-sobre">
-          <button class="btn-enviar-amostras btn-custom"> ENVIAR AMOSTRAS</button>
+          <button class="btn-enviar-amostras btn-custom" @click="$router.push('/formulario')">ENVIAR AMOSTRAS</button>
           <button class="btn-acompanhar-analises btn-custom"> ACOMPANHAR ANÁLISES</button>
         </div>
       </div>
@@ -160,6 +162,9 @@
     </div>
 
   </div>
+
+  <Libras />
+
 </template>
 
 

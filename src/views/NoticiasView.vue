@@ -51,6 +51,8 @@
   </main>
   <Footer />
 
+  <Libras />
+
 </template>
 
 <script>
@@ -58,6 +60,7 @@
 import TemaToggle from '@/components/TemaToggle.vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Libras from '@/components/Libras.vue'
 
   export default {
     name: 'NoticiasView',
@@ -66,6 +69,7 @@ import Footer from '@/components/Footer.vue'
       TemaToggle,
       Header,
       Footer,
+      Libras,
     },
 
     mounted() {

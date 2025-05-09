@@ -1,6 +1,11 @@
 <script>
+  import Libras from '@/components/Libras.vue'
+
   export default {
     name: 'LoginView',
+    components: {
+      Libras,
+    },
     data() {
       return {
         username: '',
@@ -53,6 +58,7 @@
       </div>
     </div>
   </div>
+  <Libras />
 </template>
 
 <style scoped>
