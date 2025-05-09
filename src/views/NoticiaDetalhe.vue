@@ -52,7 +52,7 @@
 
 <style scoped>
 .noticia-container {
-  max-width: 930px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 20px;
   line-height: 1.6;
