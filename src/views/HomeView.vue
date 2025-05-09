@@ -1,19 +1,26 @@
 <script>
-  import TemaToggle from '@/components/TemaToggle.vue'
-  import Header from '@/components/Header.vue'
-  import Footer from '@/components/Footer.vue'
-  import Libras from '@/components/Libras.vue'
+import TemaToggle from '@/components/TemaToggle.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import Libras from '@/components/Libras.vue'
+import noticiasJson from '@/assets/data/noticias.json'
 
-  export default {
-    name: 'HomeView',
-    components: {
-      TemaToggle,
-      Header,
-      Footer,
-      Libras,
+export default {
+  name: 'HomeView',
+  components: {
+    TemaToggle,
+    Header,
+    Footer,
+    Libras,
+  },
+  data() {
+    return {
+      noticias: noticiasJson
     }
+  }
 }
 </script>
+
 
 <template>
   <div>
@@ -44,44 +51,18 @@
 
   <!-- Cards Notícias-->
   <div class="main-card">
-    <div class="card card1">
+    <div class="card" v-for="(noticia, index) in noticias.slice(0, 3)" :key="noticia.id">
       <h3 class="cabecalho-noticias">
-        <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN">
+        <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN" />
         <span class="titulo">NOTÍCIAS</span>
       </h3>
       <div class="conteudo-container">
-        <img class="img-conteudo" src="/assets/img/foto_doutor.png" alt="Foto Doutor">
-        <p class="conteudo-texto">Dr. Luís da Silva é homenageado durante ação de identificação de amostras
-          animais no LACEN/Se,</p>
+        <img class="img-conteudo" :src="noticia.imagem.src" :alt="noticia.imagem.alt" />
+        <p class="conteudo-texto">
+          {{ noticia.titulo.slice(0, 100) }}
+        </p>
       </div>
-      <a class="botao-card" href="/noticias"> SAIBA MAIS</a>
-
-    </div>
-    <div class="card card2">
-      <h3 class="cabecalho-noticias">
-        <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN">
-        <span class="titulo">NOTÍCIAS</span>
-      </h3>
-      <div class="conteudo-container">
-        <img class="img-conteudo" src="/assets/img/foto_lab.png" alt="Foto laboratório do LACEN">
-        <p class="conteudo-texto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua...</p>
-      </div>
-      <a class="botao-card" href="#"> SAIBA MAIS</a>
-
-    </div>
-    <div class="card card3">
-      <h3 class="cabecalho-noticias">
-        <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN">
-        <span class="titulo">NOTÍCIAS</span>
-      </h3>
-      <div class="conteudo-container">
-        <img class="img-conteudo" src="/assets/img/foto_estrutura.png" alt="Estrutura">
-        <p class="conteudo-texto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua...</p>
-      </div>
-      <a class="botao-card botao3" href="#"> SAIBA MAIS</a>
-
+      <RouterLink class="botao-card" :to="`/noticias/${noticia.id}`">SAIBA MAIS</RouterLink>
     </div>
   </div>
 
