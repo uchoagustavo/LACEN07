@@ -1,11 +1,9 @@
 <script>
-  import TemaToggle from '@/components/TemaToggle.vue'
   import Libras from '@/components/Libras.vue'
 
   export default {
     name: 'CadastroAmostras',
     components: {
-      TemaToggle,
       Libras,
     },
     data() {

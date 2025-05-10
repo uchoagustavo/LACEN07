@@ -3,7 +3,6 @@ import HomeView from '@/views/HomeView.vue'
 import NoticiasView from '@/views/NoticiasView.vue'
 import LoginView from '@/views/LoginView.vue'
 import NoticiaDetalhe from '@/views/NoticiaDetalhe.vue'
-import FormularioView from '@/views/FormularioView.vue'
 import CadastroAmostras from '@/views/CadastroAmostrasView.vue'
 
 const routes = [
@@ -30,12 +29,6 @@ const routes = [
     name: 'noticia-detalhe',
     component: NoticiaDetalhe,
     props: true
-  },
-
-  {
-    path: '/formulario',
-    name: 'formulario',
-    component: FormularioView
   },
 
   {
