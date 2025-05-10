@@ -1,7 +1,12 @@
 <script>
+import TemaToggle from '@/components/TemaToggle.vue'
+
   export default{
     name:'Header',
-  }
+    components: {
+      TemaToggle
+    }
+  };
 </script>
 
 <template>
@@ -9,6 +14,10 @@
   <img src="/assets/img/bars.svg" class="icone-bars" alt="Menu" />
 
   <ul class="contatos-menu">
+    <li>
+      <TemaToggle />
+    </li>
+
     <li><a href="#" aria-label="Página inicial">Aa(1/3)</a></li>
     <li>ENTRE EM CONTATO:</li>
 

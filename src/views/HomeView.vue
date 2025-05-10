@@ -1,20 +1,20 @@
 <script>
-import TemaToggle from '@/components/TemaToggle.vue'
-import Libras from '@/components/Libras.vue'
-import noticiasJson from '@/assets/data/noticias.json'
+  import TemaToggle from '@/components/TemaToggle.vue'
+  import Libras from '@/components/Libras.vue'
+  import noticiasJson from '@/assets/data/noticias.json'
 
-export default {
-  name: 'HomeView',
-  components: {
-    TemaToggle,
-    Libras,
-  },
-  data() {
-    return {
-      noticias: noticiasJson
+  export default {
+    name: 'HomeView',
+    components: {
+      TemaToggle,
+      Libras,
+    },
+    data() {
+      return {
+        noticias: noticiasJson
+      }
     }
   }
-}
 </script>
 
 
@@ -75,7 +75,7 @@ export default {
           monitoramento
           epidemiológico e a saúde pública no estado.</p>
         <div class="botoes-sobre">
-          <button class="btn-enviar-amostras btn-custom" @click="$router.push('/formulario')">ENVIAR AMOSTRAS</button>
+          <button class="btn-enviar-amostras btn-custom" @click="$router.push('/cadastro-amostras')">ENVIAR AMOSTRAS</button>
           <button class="btn-acompanhar-analises btn-custom"> ACOMPANHAR ANÁLISES</button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <Libras />
     <main>
       <router-view />
     </main>
@@ -11,13 +12,15 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Libras from '@/components/Libras.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
-  }
+    Footer,
+    Libras,
+  },
 }
 </script>
 
@@ -28,7 +31,8 @@ export default {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   background-color: #fff;
