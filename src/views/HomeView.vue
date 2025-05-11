@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import TemaToggle from '@/components/TemaToggle.vue'
 import Libras from '@/components/Libras.vue'
@@ -17,6 +18,11 @@ export default {
   import Libras from '@/components/Libras.vue'
   import noticiasJson from '@/assets/data/noticias.json'
 
+=======
+  import Libras from '@/components/Libras.vue'
+  import noticiasJson from '@/assets/data/noticias.json'
+
+>>>>>>> 2a4b5be94199be757d313da721749335094b3209
   export default {
     name: 'HomeView',
     components: {
@@ -26,10 +32,12 @@ export default {
       return {
         noticias: noticiasJson
       }
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 2a4b5be94199be757d313da721749335094b3209
     }
   }
-}
 </script>
 
 
@@ -86,7 +94,7 @@ export default {
           monitoramento
           epidemiológico e a saúde pública no estado.</p>
         <div class="botoes-sobre">
-          <button class="btn-enviar-amostras btn-custom" @click="$router.push('/formulario')">ENVIAR AMOSTRAS</button>
+          <button class="btn-enviar-amostras btn-custom" @click="$router.push('/cadastro-amostras')">ENVIAR AMOSTRAS</button>
           <button class="btn-acompanhar-analises btn-custom"> ACOMPANHAR ANÁLISES</button>
         </div>
       </div>
