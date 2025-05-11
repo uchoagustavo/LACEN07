@@ -1,6 +1,8 @@
+<<<<<<< Updated upstream:src/assets/formularioTriatomineo.css
+=======
 <script>
   import Libras from '@/components/Libras.vue'
-  import Triatomineo from '@/components/amostras/Triatomineo.vue'
+  import Triatomineo from '@/components/Triatomineo.vue'
 
   export default {
     name: 'CadastroAmostras',
@@ -15,7 +17,6 @@
     }
   }
 </script>
-
 
 <template>
   <div class="azul-bar">
@@ -95,32 +96,33 @@
 
 
 <style>
-  a {
-    color: inherit; /* herda a cor do pai */
-    text-decoration: none; /* remove o sublinhado */
-  }
 
-  a:visited {
-    color: inherit; /* mesma cor para links visitados */
-  }
+a {
+  color: inherit; /* herda a cor do pai */
+  text-decoration: none; /* remove o sublinhado */
+}
 
-  a:hover {
-    color: inherit; /* evita alteração de cor no hover */
-  }
+a:visited {
+  color: inherit; /* mesma cor para links visitados */
+}
 
-    *{
+a:hover {
+  color: inherit; /* evita alteração de cor no hover */
+}
+
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  .menu{
+}
+.menu{
     width: 100%;
     height: 60px;
     background-color: #0291D3;
     display: flex;
     justify-content: space-between;
-  }
-  .icone-bars{
+}
+.icone-bars{
     margin-left: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -128,57 +130,57 @@
     padding: 5px;
     background-size: cover;
     border-radius: 50px;
-  }
-  .contatos-menu{
+}
+.contatos-menu{
     display: flex;
     gap: 20px;
     padding-top: 20px;
     margin-right: 50px;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  li{
+}
+li{
     list-style: none;
-  }
+}
 
-  .img-contato{
+.img-contato{
     height: 20px;
-  }
+}
 
-  #telefone-contato{
+#telefone-contato{
     position: relative;
     left: 15px;
     margin-left: 5px;
-  }
+}
 
-  .azul-bar{
+.azul-bar{
     background-color: #0A3C79;
     height: 200px;
     margin-top: 100px;
-  }
+}
 
-  .titulo-amostras{
+.titulo-amostras{
     color: white;
     font-size: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 30px;
     padding-left: 25px;
-  }
+}
 
-  .insetos{
+.insetos{
     max-width: 1250px;
     margin: 0 auto;
     margin-top: 50px;
-    }
+  }
 
-  .insetos-bar{
+.insetos-bar{
     display: flex;
     border-radius: 9999px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
-  }
+}
 
-  .inseto-button{
+.inseto-button{
     flex: 1;
     padding: 12px 16px;
     text-align: center;
@@ -189,19 +191,20 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
+}
 
-  .inseto-button:hover:not(.active){
+.inseto-button:hover:not(.active){
     background-color: #f3f4f6;
-  }
+}
 
-  .inseto-button.active {
+.inseto-button.active {
     background-color: #1a56db;
     color: white;
-  }
+}
 
-  /* Variáveis CSS para facilitar manutenção */
-  :root {
+>>>>>>> Stashed changes:src/views/CadastroAmostrasView.vue
+/* Variáveis CSS para facilitar manutenção */
+:root {
     --primary-color: #0277bd;
     --secondary-color: #58a5f0;
     --light-color: #f5f5f5;
@@ -217,22 +220,22 @@
     --spacing-lg: 24px;
     --font-family: 'Roboto', Arial, sans-serif;
   }
-
+  
   /* Reset e estilos base */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: #f9f9f9;
     line-height: 1.6;
-
+    padding: var(--spacing-lg);
   }
-
+  
   /* Cabeçalho do formulário */
   .form-header {
     display: flex;
@@ -242,12 +245,12 @@
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: var(--spacing-md);
   }
-
+  
   .form-header h1 {
     font-size: 1.8rem;
     color: var(--primary-color);
   }
-
+  
   .form-observation {
     border: 1px solid var(--border-color);
     padding: var(--spacing-sm) var(--spacing-md);
@@ -256,7 +259,7 @@
     font-size: 0.9rem;
     max-width: 400px;
   }
-
+  
   /* Formulário principal com grid layout */
   .capture-form {
     display: grid;
@@ -267,36 +270,36 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
   }
-
+  
   /* Classes para definir largura dos elementos no grid */
   .span-4 {
     grid-column: span 4;
   }
-
+  
   .span-3 {
     grid-column: span 3;
   }
-
+  
   .span-6 {
     grid-column: span 6;
   }
-
+  
   .span-12 {
     grid-column: span 12;
   }
-
+  
   /* Estilos para campos do formulário */
   .form-group {
     margin-bottom: var(--spacing-md);
   }
-
+  
   label {
     display: block;
     margin-bottom: var(--spacing-xs);
     font-weight: 500;
     font-size: 0.9rem;
   }
-
+  
   input[type="text"],
   input[type="number"],
   input[type="date"],
@@ -308,7 +311,7 @@
     font-size: 1rem;
     transition: border-color 0.3s;
   }
-
+  
   input[type="text"]:focus,
   input[type="number"]:focus,
   input[type="date"]:focus,
@@ -317,25 +320,25 @@
     outline: none;
     box-shadow: 0 0 0 2px rgba(2, 119, 189, 0.1);
   }
-
+  
   /* Estilo para checkbox */
   .checkbox-group {
     display: flex;
     align-items: center;
     margin-top: var(--spacing-xs);
   }
-
+  
   .checkbox-group input[type="checkbox"] {
     margin-right: var(--spacing-sm);
     width: 18px;
     height: 18px;
   }
-
+  
   .checkbox-group label {
     margin-bottom: 0;
     cursor: pointer;
   }
-
+  
   /* Fieldsets e legendas */
   fieldset {
     border: 1px solid var(--border-color);
@@ -343,34 +346,34 @@
     border-radius: var(--border-radius);
     margin-bottom: var(--spacing-md);
   }
-
+  
   legend {
     padding: 0 var(--spacing-sm);
     font-weight: 600;
     color: var(--primary-color);
     font-size: 0.9rem;
   }
-
+  
   /* Grid para os subcampos dentro dos fieldsets */
   .fieldset-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: var(--spacing-md);
   }
-
+  
   /* Estilos para locais de captura */
   .capture-locations {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
   }
-
+  
   .location-column h4 {
     margin-bottom: var(--spacing-sm);
     color: var(--primary-color);
     font-size: 0.9rem;
   }
-
+  
   /* Botão de envio */
   .form-actions {
     grid-column: span 12;
@@ -378,7 +381,7 @@
     justify-content: flex-end;
     margin-top: var(--spacing-lg);
   }
-
+  
   .btn {
     padding: var(--spacing-sm) var(--spacing-lg);
     background-color: var(--primary-color);
@@ -389,11 +392,11 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-
+  
   .btn:hover {
     background-color: var(--secondary-color);
   }
-
+  
   /* Status de página */
   .page-status {
     text-align: right;
@@ -401,32 +404,31 @@
     font-size: 0.9rem;
     color: #666;
   }
-
+  
   /* Estilos responsivos */
   @media (max-width: 992px) {
     .span-4, .span-3 {
       grid-column: span 6;
     }
   }
-
+  
   @media (max-width: 768px) {
     .capture-form {
       display: flex;
       flex-direction: column;
     }
-
+    
     .form-header {
       flex-direction: column;
       align-items: flex-start;
     }
-
+    
     .form-observation {
       margin-top: var(--spacing-sm);
       max-width: 100%;
     }
-
+    
     .capture-locations {
       grid-template-columns: 1fr;
     }
   }
-</style>

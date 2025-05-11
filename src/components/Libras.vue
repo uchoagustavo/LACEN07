@@ -1,3 +1,22 @@
+<script>
+  export default {
+    name: 'Libras',
+    mounted() {
+      // Evita carregar o script mais de uma vez
+      if (!document.getElementById('vlibras-script')) {
+        const script = document.createElement('script');
+        script.id = 'vlibras-script';
+        script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+        script.onload = () => {
+          new window.VLibras.Widget('https://vlibras.gov.br/app');
+        };
+        document.body.appendChild(script);
+      }
+    }
+  }
+</script>
+
+
 <template>
   <div
     vw
@@ -12,22 +31,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Libras',
-  mounted() {
-    // Evita carregar o script mais de uma vez
-    if (!document.getElementById('vlibras-script')) {
-      const script = document.createElement('script');
-      script.id = 'vlibras-script';
-      script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
-      script.onload = () => {
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      };
-      document.body.appendChild(script);
-    }
-  }
-}
-</script>
-
