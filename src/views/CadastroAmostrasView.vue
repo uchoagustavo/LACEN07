@@ -1,12 +1,18 @@
 <script>
   import Libras from '@/components/Libras.vue'
   import Triatomineo from '@/components/amostras/Triatomineo.vue'
+  import Escorpiao from '@/components/amostras/Escorpiao.vue'
+  import Caramujo from '@/components/amostras/Caramujo.vue'
+  import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
 
   export default {
     name: 'CadastroAmostras',
     components: {
       Libras,
-      Triatomineo
+      Triatomineo,
+      Escorpiao,
+      Caramujo,
+      LaminasPCE,
     },
     data() {
       return {
@@ -74,16 +80,16 @@
           <Triatomineo />
         </div>
         <div v-else-if="selected === 'ESCORPIÃO'">
-          <p>Conteúdo do Escorpiãooo</p>
+          <Escorpiao />
         </div>
         <div v-else-if="selected === 'CARAMUJO'">
-          <p>Conteúdo do Caramujo</p>
+          <Caramujo />
         </div>
         <div v-else-if="selected === 'MOSQUITO'">
           <p>Conteúdo do Mosquito</p>
         </div>
         <div v-else-if="selected === 'LÂMINAS-PCE'">
-          <p>Conteúdo das Lâminas-PCE</p>
+          <LaminasPCE />
         </div>
         <div v-else-if="selected === 'LARVA'">
           <p>Conteúdo da Larvas</p>
