@@ -1,3 +1,25 @@
+<script>
+  import noticias from '@/assets/data/noticias.json'
+  import Libras from '@/components/Libras.vue'
+
+  export default {
+    name: 'NoticiaDetalhe',
+    components: {
+      Libras,
+    },
+    data() {
+      return {
+        noticia: null
+      }
+    },
+    created() {
+      const id = parseInt(this.$route.params.id)
+      this.noticia = noticias.find(n => n.id === id)
+    }
+  }
+</script>
+
+
 <template>
   <Libras />
 
@@ -28,70 +50,49 @@
   </div>
 </template>
 
-<script>
-  import noticias from '@/assets/data/noticias.json'
-  import Libras from '@/components/Libras.vue'
-
-  export default {
-    name: 'NoticiaDetalhe',
-    components: {
-      Libras,
-    },
-    data() {
-      return {
-        noticia: null
-      }
-    },
-    created() {
-      const id = parseInt(this.$route.params.id)
-      this.noticia = noticias.find(n => n.id === id)
-    }
-  }
-</script>
-
 
 <style scoped>
-.noticia-container {
-  max-width: 930px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.6;
-  color: #000;
-}
+  .noticia-container {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #000;
+  }
 
-.meta {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 20px;
-}
+  .meta {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+  }
 
-.imagem-principal {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
+  .imagem-principal {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
 
-.paragrafo {
-  text-align: justify;
-  margin-bottom: 15px;
-}
+  .paragrafo {
+    text-align: justify;
+    margin-bottom: 15px;
+  }
 
-.imagem-fluida {
-  max-width: 300px;
-  border-radius: 10px;
-  margin: 10px;
-  object-fit: cover;
-}
+  .imagem-fluida {
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+  }
 
-.direita {
-  float: right;
-  margin-left: 20px;
-}
+  .direita {
+    float: right;
+    margin-left: 20px;
+  }
 
-.esquerda {
-  float: left;
-  margin-right: 20px;
-}
+  .esquerda {
+    float: left;
+    margin-right: 20px;
+  }
 </style>

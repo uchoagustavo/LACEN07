@@ -26,8 +26,8 @@
       }
     }
   }
-
 </script>
+
 
 <template>
   <div class="container">
@@ -60,6 +60,7 @@
   </div>
   <Libras />
 </template>
+
 
 <style scoped>
   /* Global Reset */

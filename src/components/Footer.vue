@@ -1,8 +1,9 @@
 <script>
-export default{
-  name:'Footer',
-}
+  export default{
+    name:'Footer',
+  }
 </script>
+
 
 <template>
   <footer class="rodape">
@@ -34,6 +35,7 @@ export default{
     </div>
   </footer>
 </template>
+
 
 <style scoped>
   .rodape {
@@ -130,4 +132,3 @@ export default{
     }
   }
 </style>
-
