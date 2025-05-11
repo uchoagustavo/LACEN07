@@ -1,4 +1,5 @@
 <script>
+<<<<<<< Updated upstream
 import TemaToggle from '@/components/TemaToggle.vue'
 import Libras from '@/components/Libras.vue'
 import noticiasJson from '@/assets/data/noticias.json'
@@ -12,6 +13,20 @@ export default {
   data() {
     return {
       noticias: noticiasJson
+=======
+  import Libras from '@/components/Libras.vue'
+  import noticiasJson from '@/assets/data/noticias.json'
+
+  export default {
+    name: 'HomeView',
+    components: {
+     Libras,
+    },
+    data() {
+      return {
+        noticias: noticiasJson
+      }
+>>>>>>> Stashed changes
     }
   }
 }
@@ -21,10 +36,6 @@ export default {
 <template>
 
   <Libras />
-
-  <div>
-    <TemaToggle />
-  </div>
 
   <!-- Imagem de Fundo Separada -->
   <div class="imagem-fundo">

@@ -1,3 +1,208 @@
+<<<<<<< Updated upstream:src/assets/formularioTriatomineo.css
+=======
+<script>
+  import Libras from '@/components/Libras.vue'
+  import Triatomineo from '@/components/Triatomineo.vue'
+
+  export default {
+    name: 'CadastroAmostras',
+    components: {
+      Libras,
+      Triatomineo
+    },
+    data() {
+      return {
+        selected: 'TRIATOMÍNEO'
+      }
+    }
+  }
+</script>
+
+<template>
+  <div class="azul-bar">
+    <h1 class="titulo-amostras">Cadastro e Registro de Amostras para Análise no LACEN-SE</h1>
+  </div>
+  <div id="app">
+    <Libras />
+    <div class="insetos">
+      <nav class="insetos-bar">
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'TRIATOMÍNEO' }"
+          @click="selected = 'TRIATOMÍNEO'"
+        >
+          TRIATOMÍNEO
+        </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'ESCORPIÃO' }"
+          @click="selected = 'ESCORPIÃO'"
+        >
+          ESCORPIÃO
+        </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'CARAMUJO' }"
+          @click="selected = 'CARAMUJO'"
+        >
+          CARAMUJO
+        </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'MOSQUITO' }"
+          @click="selected = 'MOSQUITO'"
+        >
+          MOSQUITO
+        </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'LÂMINAS-PCE' }"
+          @click="selected = 'LÂMINAS-PCE'"
+        >
+          LÂMINAS-PCE
+        </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'LARVA' }"
+          @click="selected = 'LARVA'"
+        >
+          LARVA
+        </button>
+      </nav>
+
+      <div class="conteudo">
+        <div v-if="selected === 'TRIATOMÍNEO'">
+          <Triatomineo />
+        </div>
+        <div v-else-if="selected === 'ESCORPIÃO'">
+          <p>Conteúdo do Escorpiãooo</p>
+        </div>
+        <div v-else-if="selected === 'CARAMUJO'">
+          <p>Conteúdo do Caramujo</p>
+        </div>
+        <div v-else-if="selected === 'MOSQUITO'">
+          <p>Conteúdo do Mosquito</p>
+        </div>
+        <div v-else-if="selected === 'LÂMINAS-PCE'">
+          <p>Conteúdo das Lâminas-PCE</p>
+        </div>
+        <div v-else-if="selected === 'LARVA'">
+          <p>Conteúdo da Larvas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<style>
+
+a {
+  color: inherit; /* herda a cor do pai */
+  text-decoration: none; /* remove o sublinhado */
+}
+
+a:visited {
+  color: inherit; /* mesma cor para links visitados */
+}
+
+a:hover {
+  color: inherit; /* evita alteração de cor no hover */
+}
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 100%;
+    height: 60px;
+    background-color: #0291D3;
+    display: flex;
+    justify-content: space-between;
+}
+.icone-bars{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #0A3C79;
+    padding: 5px;
+    background-size: cover;
+    border-radius: 50px;
+}
+.contatos-menu{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    margin-right: 50px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+li{
+    list-style: none;
+}
+
+.img-contato{
+    height: 20px;
+}
+
+#telefone-contato{
+    position: relative;
+    left: 15px;
+    margin-left: 5px;
+}
+
+.azul-bar{
+    background-color: #0A3C79;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.titulo-amostras{
+    color: white;
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.insetos{
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+.insetos-bar{
+    display: flex;
+    border-radius: 9999px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.inseto-button{
+    flex: 1;
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: white;
+    color: #374151;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inseto-button:hover:not(.active){
+    background-color: #f3f4f6;
+}
+
+.inseto-button.active {
+    background-color: #1a56db;
+    color: white;
+}
+
+>>>>>>> Stashed changes:src/views/CadastroAmostrasView.vue
 /* Variáveis CSS para facilitar manutenção */
 :root {
     --primary-color: #0277bd;
