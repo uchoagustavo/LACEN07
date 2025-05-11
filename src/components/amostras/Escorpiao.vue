@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'Triatomineo',
+    name: 'Escorpiao',
   };
 </script>
 
@@ -74,17 +74,17 @@
             </div>
 
             <!-- Quinta linha -->
-            <div class="form-group span-4">
+            <div class="form-group span-3">
               <label for="data-captura">Data da Captura</label>
               <input type="date" id="data-captura" name="data-captura" />
             </div>
 
-            <div class="form-group span-4">
+            <div class="form-group span-3">
               <label for="tipo-construcao">Tipo de Construção da casa - parede</label>
               <input type="text" id="tipo-construcao" name="tipo-construcao" />
             </div>
 
-            <div class="form-group span-4">
+            <div class="form-group span-3">
               <label for="vestigios">Vestígios Encontrados</label>
               <select id="vestigios" name="vestigios">
                 <option value="">Selecione</option>
@@ -93,6 +93,13 @@
                 <option value="cascas-ovos">Cascas de ovos</option>
                 <option value="outros">Outros</option>
               </select>
+            </div>
+
+            <div class="form-group span-3">
+              <div class="checkbox-group">
+                <input type="checkbox" id="Acidente" name="Acidente" />
+                <label for="Acidente">Acidente</label>
+              </div>
             </div>
 
             <!-- N° de Exemplares capturados -->
@@ -113,6 +120,7 @@
                 </div>
               </div>
             </fieldset>
+
 
             <!-- Condições e N° de Espécimes encaminhados -->
             <fieldset class="span-6">
