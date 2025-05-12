@@ -4,6 +4,8 @@
   import Escorpiao from '@/components/amostras/Escorpiao.vue'
   import Caramujo from '@/components/amostras/Caramujo.vue'
   import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
+  import Mosquito from '@/components/amostras/Mosquito.vue'
+
 
   export default {
     name: 'CadastroAmostras',
@@ -13,6 +15,7 @@
       Escorpiao,
       Caramujo,
       LaminasPCE,
+      Mosquito,
     },
     data() {
       return {
@@ -86,7 +89,7 @@
           <Caramujo />
         </div>
         <div v-else-if="selected === 'MOSQUITO'">
-          <p>Conteúdo do Mosquito</p>
+          <Mosquito />
         </div>
         <div v-else-if="selected === 'LÂMINAS-PCE'">
           <LaminasPCE />
