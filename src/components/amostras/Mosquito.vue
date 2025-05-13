@@ -453,42 +453,42 @@ const formData = ref({
   usuarioCadastrado: '',
   
   // Página 2
-  vulneravelNaoReceptivo: true,
+  vulneravelNaoReceptivo: false,
   vulneravelReceptivo: false,
   somenteCasosCaninos: false,
   registroPrimeiroCaso: false,
   surtoLV: false,
-  transmissaoBaixa: true,
+  transmissaoBaixa: false,
   transmissaoAlta: false,
-  surtoLT: true,
-  areaTransmissaoRecente: true,
-  areaTransmissaoRecorrente: true,
-  investigacaoEntomologica: true,
-  levantamentoEntomologico: true,
-  monitoramentoEntomologicoLV: true,
-  pesquisaFoco: true,
-  monitoramentoEntomologicoLT: true,
+  surtoLT: false,
+  areaTransmissaoRecente: false,
+  areaTransmissaoRecorrente: false,
+  investigacaoEntomologica: false,
+  levantamentoEntomologico: false,
+  monitoramentoEntomologicoLV: false,
+  pesquisaFoco: false,
+  monitoramentoEntomologicoLT: false,
   
   // Captura intradomiciliar
-  luminosaIntra: true,
-  semIscaIntra: true,
-  cdcIntra: true,
-  castroIntra: true,
-  adesivaIntra: true,
+  luminosaIntra: false,
+  semIscaIntra: false,
+  cdcIntra: false,
+  castroIntra: false,
+  adesivaIntra: false,
   
   // Captura extradomiciliar
-  luminosaExtra: true,
-  semIscaExtra: true,
-  cdcExtra: true,
-  castroExtra: true,
-  adesivaExtra: true,
+  luminosaExtra: false,
+  semIscaExtra: false,
+  cdcExtra: false,
+  castroExtra: false,
+  adesivaExtra: false,
   
   // Captura peridomiciliar
-  luminosaPeri: true,
-  semIscaPeri: true,
-  cdcPeri: true,
-  castroPeri: true,
-  adesivaPeri: true
+  luminosaPeri: false,
+  semIscaPeri: false,
+  cdcPeri: false,
+  castroPeri: false,
+  adesivaPeri: false
 })
 
 function salvarDados() {
