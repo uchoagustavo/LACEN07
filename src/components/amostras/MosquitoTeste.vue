@@ -1,3 +1,102 @@
+<script setup>
+  import { ref } from 'vue'
+
+  const currentPage = ref(1)
+
+  const formData = ref({
+    // Página 1
+    regionalDeSaude: '',
+    unidadeDeSaude: '',
+    municipio: '',
+    dataRemessa: '',
+    numeroCasa: '',
+    numeroHabitantes: null,
+    numeroComodos: null,
+    numeroAnexos: null,
+    nomeCaptor: '',
+    usoInsetirugo: false,
+    localCategoria: '',
+    teto: '',
+    piso: '',
+    dataCaptura: '',
+    tipoConstrucaoParede: '',
+    vestigiosEncontrados: '',
+    intraDomicilioCasa: null,
+    total: null,
+    periDomicilioAnexos: null,
+    especimesVivos: null,
+    especimesMortos: null,
+    especimesOutros: null,
+    casaComodo: '',
+    quarto: '',
+    anexoTipo: '',
+    galinheiro: '',
+    cozinha: '',
+    chiqueiro: '',
+    outros: '',
+    lt: '',
+    pav: '',
+    ve: '',
+    laboratoistaMunicipal: '',
+    usuarioCadastrado: '',
+
+    // Página 2
+    vulneravelNaoReceptivo: false,
+    vulneravelReceptivo: false,
+    somenteCasosCaninos: false,
+    registroPrimeiroCaso: false,
+    surtoLV: false,
+    transmissaoBaixa: false,
+    transmissaoAlta: false,
+    surtoLT: false,
+    areaTransmissaoRecente: false,
+    areaTransmissaoRecorrente: false,
+    investigacaoEntomologica: false,
+    levantamentoEntomologico: false,
+    monitoramentoEntomologicoLV: false,
+    pesquisaFoco: false,
+    monitoramentoEntomologicoLT: false,
+
+    // Captura intradomiciliar
+    luminosaIntra: false,
+    semIscaIntra: false,
+    cdcIntra: false,
+    castroIntra: false,
+    adesivaIntra: false,
+
+    // Captura extradomiciliar
+    luminosaExtra: false,
+    semIscaExtra: false,
+    cdcExtra: false,
+    castroExtra: false,
+    adesivaExtra: false,
+
+    // Captura peridomiciliar
+    luminosaPeri: false,
+    semIscaPeri: false,
+    cdcPeri: false,
+    castroPeri: false,
+    adesivaPeri: false
+  })
+
+  const goToNextPage = () => {
+    if (currentPage.value < 3) {
+      currentPage.value++
+    }
+  }
+
+  const goToPreviousPage = () => {
+    if (currentPage.value > 1) {
+      currentPage.value--
+    }
+  }
+
+  const submitForm = () => {
+    console.log('Form submitted', formData.value)
+  }
+</script>
+
+
 <template>
   <div class="capture-sheet">
     <div class="header">
@@ -410,111 +509,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const currentPage = ref(1)
-
-const formData = ref({
-  // Página 1
-  regionalDeSaude: '',
-  unidadeDeSaude: '',
-  municipio: '',
-  dataRemessa: '',
-  numeroCasa: '',
-  numeroHabitantes: null,
-  numeroComodos: null,
-  numeroAnexos: null,
-  nomeCaptor: '',
-  usoInsetirugo: false,
-  localCategoria: '',
-  teto: '',
-  piso: '',
-  dataCaptura: '',
-  tipoConstrucaoParede: '',
-  vestigiosEncontrados: '',
-  intraDomicilioCasa: null,
-  total: null,
-  periDomicilioAnexos: null,
-  especimesVivos: null,
-  especimesMortos: null,
-  especimesOutros: null,
-  casaComodo: '',
-  quarto: '',
-  anexoTipo: '',
-  galinheiro: '',
-  cozinha: '',
-  chiqueiro: '',
-  outros: '',
-  lt: '',
-  pav: '',
-  ve: '',
-  laboratoistaMunicipal: '',
-  usuarioCadastrado: '',
-  
-  // Página 2
-  vulneravelNaoReceptivo: false,
-  vulneravelReceptivo: false,
-  somenteCasosCaninos: false,
-  registroPrimeiroCaso: false,
-  surtoLV: false,
-  transmissaoBaixa: false,
-  transmissaoAlta: false,
-  surtoLT: false,
-  areaTransmissaoRecente: false,
-  areaTransmissaoRecorrente: false,
-  investigacaoEntomologica: false,
-  levantamentoEntomologico: false,
-  monitoramentoEntomologicoLV: false,
-  pesquisaFoco: false,
-  monitoramentoEntomologicoLT: false,
-  
-  // Captura intradomiciliar
-  luminosaIntra: false,
-  semIscaIntra: false,
-  cdcIntra: false,
-  castroIntra: false,
-  adesivaIntra: false,
-  
-  // Captura extradomiciliar
-  luminosaExtra: false,
-  semIscaExtra: false,
-  cdcExtra: false,
-  castroExtra: false,
-  adesivaExtra: false,
-  
-  // Captura peridomiciliar
-  luminosaPeri: false,
-  semIscaPeri: false,
-  cdcPeri: false,
-  castroPeri: false,
-  adesivaPeri: false
-})
-
-function salvarDados() {
-  localStorage.setItem('formulario', JSON.stringify(formData.value));
-}
-
-
-const goToNextPage = () => {
-  if (currentPage.value < 3) {
-    currentPage.value++
-  }
-}
-
-const goToPreviousPage = () => {
-  if (currentPage.value > 1) {
-    currentPage.value--
-  }
-}
-
-function submitForm() {
-  salvarDados() 
-  alert('Dados enviados e salvos com sucesso!')
-
-}
-
-</script>
 
 <style scoped>
   * {
