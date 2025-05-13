@@ -491,6 +491,11 @@ const formData = ref({
   adesivaPeri: true
 })
 
+function salvarDados() {
+  localStorage.setItem('formulario', JSON.stringify(formData.value));
+}
+
+
 const goToNextPage = () => {
   if (currentPage.value < 3) {
     currentPage.value++
@@ -503,9 +508,12 @@ const goToPreviousPage = () => {
   }
 }
 
-const submitForm = () => {
-  console.log('Form submitted', formData.value)
+function submitForm() {
+  salvarDados() 
+  alert('Dados enviados e salvos com sucesso!')
+
 }
+
 </script>
 
 <style scoped>
