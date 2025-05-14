@@ -5,6 +5,7 @@
   import Caramujo from '@/components/amostras/Caramujo.vue'
   import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
   import Mosquito from '@/components/amostras/Mosquito.vue'
+  import MosquitoTeste from '@/components/amostras/MosquitoTeste.vue'
 
 
   export default {
@@ -16,6 +17,7 @@
       Caramujo,
       LaminasPCE,
       Mosquito,
+      MosquitoTeste,
     },
     data() {
       return {
@@ -76,6 +78,13 @@
         >
           LARVA
         </button>
+        <button
+          class="inseto-button"
+          :class="{ active: selected === 'MOSQUITOTESTE' }"
+          @click="selected = 'MOSQUITOTESTE'"
+        >
+          MOSQUITO (TESTE DEV)
+        </button>
       </nav>
 
       <div class="conteudo">
@@ -96,6 +105,9 @@
         </div>
         <div v-else-if="selected === 'LARVA'">
           <p>Conteúdo da Larvas</p>
+        </div>
+        <div v-else-if="selected === 'MOSQUITOTESTE'">
+          <MosquitoTeste />
         </div>
       </div>
     </div>
