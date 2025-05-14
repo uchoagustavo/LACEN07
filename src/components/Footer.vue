@@ -56,7 +56,7 @@
 
 <style>
 .rodape {
-  background: linear-gradient(135deg, #002f5f, #004b87);
+  background:#004b87;
   color: white;
   padding: 40px 0;
 }
@@ -123,6 +123,7 @@
   overflow: hidden;
 }
 
+
 @media (max-width: 600px) {
   .rodape {
     text-align: center;
@@ -130,10 +131,10 @@
 
   .coluna {
     margin-bottom: 20px;
-    }
   }
 
   .container {
     grid-template-columns: 1fr;
   }
+}
 </style>
