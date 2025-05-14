@@ -38,7 +38,7 @@
 
 
   <!-- Cards Notícias-->
-  <div class="main-card">
+  <div class="main-card" >
     <div class="card" v-for="(noticia) in noticias.slice(0, 3)" :key="noticia.id">
       <h3 class="cabecalho-noticias">
         <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN" />
@@ -305,6 +305,9 @@
     display: flex;
     justify-content: center;
     background-color: #0a3c79;
+  }
+  .main-card.dark-theme{
+    background-color: #121212;
   }
 
   .card {
@@ -619,4 +622,5 @@
       text-align: center;
     }
   }
+
 </style>
