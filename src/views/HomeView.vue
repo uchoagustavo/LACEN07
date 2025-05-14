@@ -335,6 +335,11 @@ const noticias = ref(noticiasJson)
     transition: 300ms linear;
   }
 
+  .dark-theme .botao-card:hover {
+  background-color: #1e40af; 
+}
+
+
   .card .img-conteudo {
     width: 200px;
     margin-top: 50px;
