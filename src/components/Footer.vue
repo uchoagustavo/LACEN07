@@ -1,7 +1,11 @@
-<script>
-  export default{
-    name:'Footer',
-  }
+<script setup>
+import { useTemaStore } from '../stores/tema';
+
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
 </script>
 
 
@@ -45,7 +49,9 @@
     font-size: 14px;
     width: 100%;
   }
-
+  body.dark-theme .rodape{
+    background-color: #102d53;
+  }
   .rodape .container {
     display: flex;
     justify-content: space-between;

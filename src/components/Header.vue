@@ -1,23 +1,13 @@
-<script>
-export default {
-  name: 'Header',
-  mounted() {
-    const temaSalvo = localStorage.getItem('tema') === 'escuro';
-    if (temaSalvo) {
-      document.body.classList.add('dark-theme');
-    }
-  },
-  methods: {
-    alternarTema() {
-      const corpo = document.body;
-      corpo.classList.toggle("dark-theme");
+<script setup>
+import { useTemaStore } from '@/stores/tema'
 
-      const temaAtual = corpo.classList.contains("dark-theme") ? "escuro" : "claro";
-      localStorage.setItem("tema", temaAtual);
-    },
-  },
-};
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
 </script>
+
 
 <template>
   <nav class="menu">

@@ -1,16 +1,21 @@
 <script>
-  import Header from '@/components/Header.vue'
-  import Footer from '@/components/Footer.vue'
-  import Libras from '@/components/Libras.vue'
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Libras from '@/components/Libras.vue';
+import { useTemaStore } from '@/stores/tema';
 
-  export default {
-    name: 'App',
-    components: {
-      Header,
-      Footer,
-      Libras,
-    },
-  }
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Footer,
+    Libras,
+  },
+  mounted() {
+    const tema = useTemaStore();
+    tema.aplicarTemaSalvo(); 
+  },
+};
 </script>
 
 
