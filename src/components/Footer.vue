@@ -123,4 +123,17 @@
   overflow: hidden;
 }
 
+@media (max-width: 600px) {
+  .rodape {
+    text-align: center;
+  }
+
+  .coluna {
+    margin-bottom: 20px;
+    }
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
 </style>
