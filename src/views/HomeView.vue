@@ -21,7 +21,7 @@ const noticias = ref(noticiasJson)
   <div class="imagem-fundo">
     <div class="quem-somos">
       <div class="quem-somos-info">
-        <img class="quem-somos-lacen" src="/assets/img/lacen_favicon_48x48.png" alt="">
+        <img class="quem-somos-lacen" id="hero-img" src="/assets/img/lacen_favicon_48x48.png" alt="">
         <h4 class="quem-somos-lacen">Laboratórios Centrais de Saúde Pública</h4>
       </div>
       <h1>QUEM SOMOS NÓS?</h1>
@@ -148,6 +148,9 @@ const noticias = ref(noticiasJson)
     flex-direction: column;
   }
 
+  
+
+
 
 
   /* Menu de Navegação */
@@ -208,6 +211,10 @@ const noticias = ref(noticiasJson)
     width: 100%;
     padding: 0;
 
+  }
+
+  .dark-theme .quem-somos h1{
+    color: white;
   }
 
   .quem-somos h4 {
@@ -306,7 +313,7 @@ const noticias = ref(noticiasJson)
   }
   
   body.dark-theme .main-card{
-    background-color: 	#132E4C;
+    background-color: #1E293B;
   }
 
   .card {
@@ -389,13 +396,27 @@ const noticias = ref(noticiasJson)
   margin-left: 250px;
   color: #f1f5f9; 
   transition: background-color 0.3s, color 0.3s;
-}
+  }
+  
+  .dark-theme .section-sobre{
+    background-color: #0D1B2A;
+  }
 
 
   .branco-bar {
     width: 100%;
     height: 150px;
     background-color: white;
+  }
+
+  .dark-theme .branco-bar{
+    width: 100%;
+    height: 150px;
+    background-color: #0D1B2A;
+  }
+
+  .dark-theme body{
+    background-color: #0D1B2A;
   }
 
   .azul-bar {
@@ -407,6 +428,10 @@ const noticias = ref(noticiasJson)
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     height: 380px;
+  }
+
+  .dark-theme .azul-bar{
+    background-color: #132E4C;
   }
 
   .coteudo-esquerda {
@@ -484,6 +509,10 @@ const noticias = ref(noticiasJson)
     width: 350px;
   }
 
+  .dark-theme .horario-card{
+    background-color: #132E4C;
+  }
+
   .titulo-card {
     font-size: 30px;
     font-weight: bold;
@@ -494,6 +523,10 @@ const noticias = ref(noticiasJson)
   .divider {
     border-bottom: 2px solid rgb(255, 255, 255);
     margin: 10px 0 20px;
+  }
+
+  .dark-theme .divider{
+    background-color: #132E4C;
   }
 
   .horario-row {

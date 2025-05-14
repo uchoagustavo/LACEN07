@@ -50,7 +50,7 @@ function alternarTema() {
     width: 100%;
   }
   body.dark-theme .rodape{
-    background-color: #0A192F;
+    background-color: #132E4C;
   }
   .rodape .container {
     display: flex;
