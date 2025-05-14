@@ -1,23 +1,13 @@
-<script>
-export default {
-  name: 'Header',
-  mounted() {
-    const temaSalvo = localStorage.getItem('tema') === 'escuro';
-    if (temaSalvo) {
-      document.body.classList.add('dark-theme');
-    }
-  },
-  methods: {
-    alternarTema() {
-      const corpo = document.body;
-      corpo.classList.toggle("dark-theme");
+<script setup>
+import { useTemaStore } from '@/stores/tema'
 
-      const temaAtual = corpo.classList.contains("dark-theme") ? "escuro" : "claro";
-      localStorage.setItem("tema", temaAtual);
-    },
-  },
-};
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
 </script>
+
 
 <template>
   <nav class="menu">
@@ -26,7 +16,7 @@ export default {
     </div>
     <ul class="contatos-menu">
       <li>
-        <button class="botao-tema" @click="alternarTema" aria-label="Alternar tema claro/escuro"></button>
+        <button class="botao-tema" @click="alternarTema()" aria-label="Alternar tema claro/escuro"></button>
       </li>
       <li><a href="#" aria-label="Página inicial">Aa(1/3)</a></li>
 
@@ -69,6 +59,9 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
+}
+body.dark-theme .menu{
+  background-color: #102d53;
 }
 
 .menu-toggle {

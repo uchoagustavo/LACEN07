@@ -103,7 +103,8 @@
                   <input type="number" v-model="formData.intraDomicilioCasa" />
                 </div>
                 <div>
-                  <label>Total</label>
+                  <label
+                  >Total</label>
                   <input type="number" v-model="formData.total" />
                 </div>
               </div>

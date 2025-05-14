@@ -1,7 +1,11 @@
-<script>
-  export default{
-    name:'Footer',
-  }
+<script setup>
+import { useTemaStore } from '../stores/tema';
+
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
 </script>
 
 <template >
@@ -126,7 +130,67 @@
 
 @media (max-width: 600px) {
   .rodape {
-    text-align: center;
+    background-color: #002f5f;
+    color: white;
+    padding: 30px 0;
+    font-size: 14px;
+    width: 100%;
+  }
+  body.dark-theme .rodape{
+    background-color: #132E4C;
+  }
+  .rodape .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .institucional,
+  .fale-conosco {
+    flex: 1 1 300px;
+  }
+
+  .institucional-texto {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo21 {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .endereco {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .endereco-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .titulo-fale-conosco {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contatos-email,
+  .contatos-telefone,
+  .contato-instagram {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+
+    <!--text-align: center;-->
+
   }
 
   .coluna {

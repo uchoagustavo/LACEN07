@@ -1,18 +1,16 @@
-<script>
-  import Libras from '@/components/Libras.vue'
-  import noticiasJson from '@/assets/data/noticias.json'
+<script setup>
+import Libras from '@/components/Libras.vue'
+import noticiasJson from '@/assets/data/noticias.json'
+import { useTemaStore } from '@/stores/tema'
+import { ref } from 'vue'
 
-  export default {
-    name: 'HomeView',
-    components: {
-      Libras,
-    },
-    data() {
-      return {
-        noticias: noticiasJson
-      }
-    }
-  }
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
+
+const noticias = ref(noticiasJson)
 </script>
 
 
@@ -23,7 +21,7 @@
   <div class="imagem-fundo">
     <div class="quem-somos">
       <div class="quem-somos-info">
-        <img class="quem-somos-lacen" src="/assets/img/lacen_favicon_48x48.png" alt="">
+        <img class="quem-somos-lacen" id="hero-img" src="/assets/img/lacen_favicon_48x48.png" alt="">
         <h4 class="quem-somos-lacen">Laboratórios Centrais de Saúde Pública</h4>
       </div>
       <h1>QUEM SOMOS NÓS?</h1>
@@ -38,7 +36,7 @@
 
 
   <!-- Cards Notícias-->
-  <div class="main-card">
+  <div class="main-card" >
     <div class="card" v-for="(noticia) in noticias.slice(0, 3)" :key="noticia.id">
       <h3 class="cabecalho-noticias">
         <img class="img-logo" src="/assets/img/favicon_48x48%201.svg" alt="Logo LACEN" />
@@ -150,6 +148,9 @@
     flex-direction: column;
   }
 
+  
+
+
 
 
   /* Menu de Navegação */
@@ -210,6 +211,10 @@
     width: 100%;
     padding: 0;
 
+  }
+
+  .dark-theme .quem-somos h1{
+    color: white;
   }
 
   .quem-somos h4 {
@@ -306,6 +311,10 @@
     justify-content: center;
     background-color: #0a3c79;
   }
+  
+  body.dark-theme .main-card{
+    background-color: #1E293B;
+  }
 
   .card {
     margin: 10px;
@@ -316,10 +325,27 @@
     box-shadow: rgb(38, 57, 77) 8px 20px 30px -10px;
   }
 
+  .dark-theme .card {
+  margin: 10px;
+  background-color: #1e293b; 
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(15, 23, 42, 0.6) 8px 20px 30px -10px; 
+  color: #f1f5f9; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
   .card:hover {
     transform: scale(1.1);
     transition: 300ms linear;
   }
+
+  .dark-theme .botao-card:hover {
+  background-color: #1e40af; 
+}
+
 
   .card .img-conteudo {
     width: 200px;
@@ -362,10 +388,35 @@
     color: #fff;
   }
 
+  .dark-theme .botao-card {
+  text-decoration: none;
+  background-color: #2563eb; 
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 250px;
+  color: #f1f5f9; 
+  transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-theme .section-sobre{
+    background-color: #0D1B2A;
+  }
+
+
   .branco-bar {
     width: 100%;
     height: 150px;
     background-color: white;
+  }
+
+  .dark-theme .branco-bar{
+    width: 100%;
+    height: 150px;
+    background-color: #0D1B2A;
+  }
+
+  .dark-theme body{
+    background-color: #0D1B2A;
   }
 
   .azul-bar {
@@ -377,6 +428,10 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     height: 380px;
+  }
+
+  .dark-theme .azul-bar{
+    background-color: #132E4C;
   }
 
   .coteudo-esquerda {
@@ -454,6 +509,10 @@
     width: 350px;
   }
 
+  .dark-theme .horario-card{
+    background-color: #132E4C;
+  }
+
   .titulo-card {
     font-size: 30px;
     font-weight: bold;
@@ -464,6 +523,10 @@
   .divider {
     border-bottom: 2px solid rgb(255, 255, 255);
     margin: 10px 0 20px;
+  }
+
+  .dark-theme .divider{
+    background-color: #132E4C;
   }
 
   .horario-row {
@@ -619,4 +682,5 @@
       text-align: center;
     }
   }
+
 </style>
