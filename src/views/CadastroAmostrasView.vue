@@ -6,7 +6,7 @@
   import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
   import Mosquito from '@/components/amostras/Mosquito.vue'
   import MosquitoTeste from '@/components/amostras/MosquitoTeste.vue'
-
+  import Larva from '@/components/amostras/Larva.vue'
 
   export default {
     name: 'CadastroAmostras',
@@ -18,6 +18,7 @@
       LaminasPCE,
       Mosquito,
       MosquitoTeste,
+      Larva
     },
     data() {
       return {
@@ -104,7 +105,7 @@
           <LaminasPCE />
         </div>
         <div v-else-if="selected === 'LARVA'">
-          <p>Conteúdo da Larvas</p>
+          <Larva />
         </div>
         <div v-else-if="selected === 'MOSQUITOTESTE'">
           <MosquitoTeste />
