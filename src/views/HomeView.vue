@@ -1,18 +1,16 @@
-<script>
-  import Libras from '@/components/Libras.vue'
-  import noticiasJson from '@/assets/data/noticias.json'
+<script setup>
+import Libras from '@/components/Libras.vue'
+import noticiasJson from '@/assets/data/noticias.json'
+import { useTemaStore } from '@/stores/tema'
+import { ref } from 'vue'
 
-  export default {
-    name: 'HomeView',
-    components: {
-      Libras,
-    },
-    data() {
-      return {
-        noticias: noticiasJson
-      }
-    }
-  }
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
+
+const noticias = ref(noticiasJson)
 </script>
 
 
@@ -306,8 +304,9 @@
     justify-content: center;
     background-color: #0a3c79;
   }
-  .main-card.dark-theme{
-    background-color: #121212;
+  
+  body.dark-theme .main-card{
+    background-color: 	#132E4C;
   }
 
   .card {
@@ -318,6 +317,18 @@
     border-radius: 10px;
     box-shadow: rgb(38, 57, 77) 8px 20px 30px -10px;
   }
+
+  .dark-theme .card {
+  margin: 10px;
+  background-color: #1e293b; 
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(15, 23, 42, 0.6) 8px 20px 30px -10px; 
+  color: #f1f5f9; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
 
   .card:hover {
     transform: scale(1.1);
@@ -364,6 +375,17 @@
     margin-left: 250px;
     color: #fff;
   }
+
+  .dark-theme .botao-card {
+  text-decoration: none;
+  background-color: #2563eb; 
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 250px;
+  color: #f1f5f9; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
 
   .branco-bar {
     width: 100%;
