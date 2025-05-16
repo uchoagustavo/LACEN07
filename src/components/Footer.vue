@@ -65,6 +65,10 @@ function alternarTema() {
   padding: 40px 0;
 }
 
+.dark-theme .rodape{
+  background-color: #002f5f;
+}
+
 .container {
   max-width: 1800px;
   margin: auto;
@@ -125,6 +129,10 @@ function alternarTema() {
 .descricao {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.logo-footer{
+  max-width: 300px;
 }
 
 
@@ -188,8 +196,7 @@ function alternarTema() {
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
-
-    <!--text-align: center;-->
+    /*text-align: center;*/ 
 
   }
 
