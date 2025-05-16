@@ -148,6 +148,9 @@ const noticias = ref(noticiasJson)
     flex-direction: column;
   }
 
+  .dark-theme .imagem-fundo{
+    background-image: url('/assets/img/img-heroDark-theme.png');
+  }
   
 
 
