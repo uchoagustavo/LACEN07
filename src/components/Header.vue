@@ -11,21 +11,13 @@ function alternarTema() {
 
 <template>
   <nav class="menu">
-    <div class="menu-toggle">
-      <img src="/assets/img/bars.svg" class="icone-bars" alt="Menu" />
-    </div>
     <ul class="contatos-menu">
       <li>
         <button class="botao-tema" @click="alternarTema()" aria-label="Alternar tema claro/escuro"></button>
       </li>
       <li><a href="#" aria-label="Página inicial">Aa(1/3)</a></li>
-
-      <li class="infos-header">ENTRE EM CONTATO:</li>
-
       <li class="infos-header">
         <a href="https://wa.me/557932346007" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <img class="img-contato" src="/assets/img/telephone-fill.png" alt="Telefone" />
-          (79) 3234-6007
         </a>
       </li>
 
@@ -47,6 +39,24 @@ function alternarTema() {
         </a>
       </li>
     </ul>
+    <ul class="menu-inicial">
+      <li class="dropdown">
+        <a href="#">Institucional</a>
+        <ul class="submenu">
+          <li><a href="#">Atividades</a></li>
+          <li><a href="#">Estrutura Administrativa</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#">Profissionais</a></li>
+      <li class="dropdown">
+        <a href="#">Amostras</a>
+        <ul class="submenu">
+          <li><a href="#">Envio de Amostras</a></li>
+          <li><a href="#">Acompanhar Análises</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -64,28 +74,12 @@ body.dark-theme .menu{
   background-color: #102d53;
 }
 
-.menu-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-}
-
-.icone-bars {
-  width: 40px; /* aumente aqui como quiser */
-  height: auto;
-  cursor: pointer;
-  flex-shrink: 0;
-  align-self: center;
-}
-
-
-
 .contatos-menu {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
   list-style: none;
   padding: 0;
@@ -142,6 +136,66 @@ body.dark-theme .botao-tema::before {
   left: 26px;
   background-color: #fff;
 }
+/* container do menu */
+.menu-inicial {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  background-color: transparent;
+  margin-left: 500px;  
+  margin-top: -38px;
+}
+
+/* estilo dos itens principais */
+.menu-inicial > li {
+  position: relative;
+}
+
+/* links principais */
+.menu-inicial a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  background: none
+}
+
+/* estilo dos submenus */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* itens do submenu */
+.submenu li a {
+  padding: 10px 15px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* mostra submenu ao passar o mouse */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* efeito hover */
+.menu-inicial a:hover {
+  background-color: #ddd;
+}
+
 
 @media (max-width: 595px) {
   .infos-header {
