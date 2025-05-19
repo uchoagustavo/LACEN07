@@ -409,7 +409,7 @@ const noticias = ref(noticiasJson)
   .branco-bar {
     width: 100%;
     height: 150px;
-    background-color: white;
+    background-color: #0a3c79;
   }
 
   .dark-theme .branco-bar{
@@ -431,6 +431,8 @@ const noticias = ref(noticiasJson)
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     height: 380px;
+    padding: 0;
+    margin: 0;
   }
 
   .dark-theme .azul-bar{
