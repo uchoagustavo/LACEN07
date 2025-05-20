@@ -4,6 +4,7 @@ import NoticiasView from '@/views/NoticiasView.vue'
 import LoginView from '@/views/LoginView.vue'
 import NoticiaDetalhe from '@/views/NoticiaDetalhe.vue'
 import CadastroAmostras from '@/views/CadastroAmostrasView.vue'
+import Institucional from '@/views/Institucional.vue'
 
 const routes = [
   {
@@ -35,6 +36,12 @@ const routes = [
     path: '/cadastro-amostras',
     name: 'cadastroAmostras',
     component: CadastroAmostras
+  },
+
+  {
+    path: '/institucional',
+    name: 'Institucional',
+    component: Institucional
   }
 
 ]
