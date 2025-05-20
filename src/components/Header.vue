@@ -110,7 +110,7 @@ body.dark-theme .menu{
 }
 .logo-inicial {
   position: absolute;
-  margin-left: -1150px;
+  margin-left: -1020px;
   top: 5px
 }
 
@@ -121,6 +121,7 @@ body.dark-theme .menu{
 
 /* Botão de tema */
 .botao-tema {
+  position: absolute;
   background-color: #ffcc00;
   border-radius: 50px;
   padding: 5px;
@@ -131,6 +132,7 @@ body.dark-theme .menu{
   transition: background-color 0.3s ease;
   font-size: 0;
   position: relative;
+  top: -1px;
 }
 
 .botao-tema::before {
@@ -165,7 +167,7 @@ body.dark-theme .botao-tema::before {
   margin: 0;
   position: relative;
   background-color: transparent;
-  margin-left: 650px;  
+  margin-left: 500px;  
   margin-top: -45px;
 }
 
