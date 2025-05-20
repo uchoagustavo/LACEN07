@@ -42,10 +42,6 @@ function alternarTema() {
     <ul class="menu-inicial">
       <li class="dropdown">
         <router-link to="/institucional">Institucional</router-link>
-        <ul class="submenu">
-          <li><a href="#">Atividades</a></li>
-          <li><a href="#">Estrutura Administrativa</a></li>
-        </ul>
       </li>
       <li><router-link to="/noticias">Notícias</router-link></li>
       <li><a href="#">Profissionais</a></li>
