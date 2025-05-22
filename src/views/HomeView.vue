@@ -291,23 +291,6 @@
     display: flex;
   }
 
-  .bar {
-    flex: 1;
-    height: 5px;
-  }
-
-  .green {
-    background-color: #007c24;
-  }
-
-  .yellow {
-    background-color: #f4b802;
-  }
-
-  .blue {
-    background-color: #0291d3;
-  }
-
   /* Cards Notícias */
   .main-card {
     display: flex;
@@ -553,7 +536,13 @@
   }
 
 
+.dark-theme .btn-enviar-amostras, .dark-theme .btn-acompanhar-analises {
+  background-color: #2563eb;
+}
 
+.dark-theme .btn-enviar-amostras:hover, .dark-theme .btn-acompanhar-analises:hover {
+  background-color: #1e40af;
+}
 
   /* Responsividade */
   @media (max-width: 768px) {
@@ -688,4 +677,28 @@
     }
   }
 
+
+  @media(max-width: 400px) {
+    .titulo-card {
+      font-size: 28px;
+    }
+  }
+
+  @media(max-width: 390px) {
+    .titulo-card {
+      font-size: 26px;
+    }
+  }
+
+  @media(max-width: 365px) {
+    .titulo-card {
+      font-size: 24px;
+    }
+  }
+
+  @media(max-width: 347px) {
+    .titulo-card {
+      font-size: 15px;
+    }
+  }
 </style>

@@ -266,6 +266,7 @@ body.dark-theme .botao-tema::before {
     .logo-inicial {
       justify-content: flex-start;
       order: 0;
+      margin-top: auto;
     }
 
     .contatos-wrapper {
@@ -301,6 +302,45 @@ body.dark-theme .botao-tema::before {
     }
     body.dark-theme .menu-inicial {
       background-color: #0e2643;
+    }
+  }
+
+    @media (max-width: 455px) {
+    .infos-header {
+      display: none;
+    }
+
+    .menu-inicial a {
+      gap: 5px;
+      font-size: 14px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+  }
+
+  @media (max-width: 380px) {
+    .menu-inicial a {
+      font-size: 13px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+  }
+
+  @media (max-width: 330px) {
+    .menu-inicial a {
+      font-size: 12px;
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+  }
+
+    @media (max-width: 300px) {
+    .menu-inicial a {
+      font-size: 10px;
+      padding-right: 1px;
+      padding-left: 1px;
     }
   }
 </style>
