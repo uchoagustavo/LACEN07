@@ -409,7 +409,7 @@
   .branco-bar {
     width: 100%;
     height: 150px;
-    background-color: #0a3c79;
+    background-color: #ffffff;
   }
 
   .dark-theme .branco-bar{

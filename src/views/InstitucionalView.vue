@@ -1,3 +1,16 @@
+<script setup>
+import { useTemaStore } from '../stores/tema';
+
+const temaStore = useTemaStore()
+
+function alternarTema() {
+  temaStore.alternarTema()
+}
+
+</script>
+
+
+
 <template>
     <div class="institucional">
         <section class="titulo">
@@ -106,9 +119,17 @@ export default {
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background-color: #0D1B2A;
+}
+
 .institucional {
     background-color: white;
     font-family: Arial, sans-serif;
+}
+
+.dark-theme .institucional{
+    background-color: #0D1B2A;
 }
 
 .titulo {
@@ -119,12 +140,20 @@ export default {
     color: #fff;
 }
 
+.dark-theme .titulo{
+    background-color: #003366
+}
+
 .titulo h1 {
     font-size: 2rem;
 }
 
 .conteudo {
     padding: 1rem 4rem;
+}
+
+.dark-theme .conteudo{
+    background-color: #0D1B2A;
 }
 
 .conteudo-topo {
@@ -143,10 +172,35 @@ export default {
     margin-bottom: 0.5rem;
 }
 
+.dark-theme .conteudo-topo{
+    color: #E0E0E0;
+    background-color: #0D1B2A;
+}
+.dark-theme .conteudo-topo h2{
+    color: #B0C4DE
+}
+
 .conteudo-meio {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+.dark-theme .conteudo-meio{
+    color: #E0E0E0;
+    background-color: #0D1B2A;
+}
+
+.dark-theme .conteudo-estrutura h2{
+    color: #B0C4DE;
+}
+
+.dark-theme .valores{
+    color:  #E0E0E0;
+}
+
+.dark-theme .valores h2{
+    color: #B0C4DE;
 }
 
 .missao,
@@ -192,6 +246,11 @@ export default {
     height: auto;
     display: block;
     margin-top: 2rem;
+}
+
+.dark-theme .organograma{
+    background-color: #0D1B2A;
+    border-radius: 8px;
 }
 
 .valores ul {
