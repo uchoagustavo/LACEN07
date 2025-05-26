@@ -1,5 +1,18 @@
 <script setup>
 import { useTemaStore } from '@/stores/tema'
+import { useAcessibilidadeStore } from '@/stores/acessibilidade'
+import { computed, onMounted } from 'vue'
+
+const acessibilidadeStore = useAcessibilidadeStore()
+
+onMounted(() => {
+  acessibilidadeStore.aplicarFonteSalva()
+})
+const textoBotao = computed(() => {
+  const nivel = acessibilidadeStore.indiceAtual
+  const exibicao = nivel === 3 ? 1 : nivel + 1
+  return `Aa(${exibicao}/3)`
+})
 
 const temaStore = useTemaStore()
 
@@ -19,7 +32,9 @@ function alternarTema() {
       </li>
       </li>
       <li class="aumento-letras">
-        <a href="#" aria-label="Página inicial">Aa(1/3)</a>
+        <a href="#" @click.prevent="acessibilidadeStore.alternarFonte()" aria-label="Aumentar tamanho da fonte">
+    {{ textoBotao }}
+        </a>
       </li>
       <li class="infos-header">
         <a href="https://wa.me/557932346007" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">

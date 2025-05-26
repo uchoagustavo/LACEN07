@@ -2,7 +2,20 @@
   import Libras from '@/components/Libras.vue'
   import noticiasJson from '@/assets/data/noticias.json'
   import { useTemaStore } from '@/stores/tema'
-  import { ref } from 'vue'
+  import { useAcessibilidadeStore } from '@/stores/acessibilidade'
+  import { ref, computed, onMounted } from 'vue'
+
+  const acessibilidadeStore = useAcessibilidadeStore()
+
+  onMounted(() => {
+    acessibilidadeStore.aplicarFonteSalva()
+  })
+
+  const textoBotao = computed(() => {
+    const nivel = acessibilidadeStore.indiceAtual
+    const exibicao = nivel === 3 ? 1 : nivel + 1
+    return `Aa(${exibicao}/3)`
+  })
 
   const temaStore = useTemaStore()
 
@@ -18,7 +31,7 @@
   <Libras />
 
   <!-- Imagem de Fundo Separada -->
-  <div class="imagem-fundo">
+  <div class="imagem-fundo" :class="acessibilidadeStore.classeFonte">
     <div class="quem-somos">
       <div class="quem-somos-info">
         <img class="quem-somos-lacen" id="hero-img" src="/assets/img/lacen_favicon_48x48.png" alt="">
@@ -138,7 +151,17 @@
   body {
     background-color: #f5f5f5;
   }
+  .fonte-1 {
+  font-size: 100%;
+}
 
+.fonte-2 {
+  font-size: 120%;
+}
+
+.fonte-3 {
+  font-size: 140%;
+}
   /* Fundo da Página */
   .imagem-fundo {
     background-image: url('/assets/img/home_hero_background.png');
@@ -160,6 +183,7 @@
   .menu {
     background-color: #0a3c79;
     padding: 8px 0;
+    min-height: auto;
   }
 
   .grid-nav {
@@ -176,6 +200,7 @@
 
   .nav-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     list-style: none;
@@ -185,8 +210,8 @@
     text-decoration: none;
     color: #fff;
     font-weight: normal;
+    font-size: 1rem;
     transition: 0.3s;
-    white-space: nowrap;
   }
 
   .nav-list a:hover {
@@ -209,7 +234,7 @@
   .quem-somos h1 {
     font-family: 'Rubik Doodle Shadow';
     font-weight: 500;
-    font-size: 68px;
+    font-size: 4.25rem;
     color: #0a3c79;
     width: 100%;
     padding: 0;
@@ -224,7 +249,7 @@
     margin-top: 7px;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 16.7px;
+    font-size: 1.05rem;
     color: #0a3c79;
     max-width: 505px;
     width: 100%;
@@ -248,7 +273,7 @@
     font-family: 'Roboto';
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #0a3c79;
     white-space: nowrap;
     /* Impede que o texto quebre a linha */
@@ -281,7 +306,7 @@
     /* Cor do texto */
     font-weight: normal;
     /* Deixa o texto em negrito */
-    font-size: 45px;
+    font-size: 2.8125rem;
     /* Tamanho do texto */
   }
 
@@ -447,7 +472,7 @@
   }
 
   .descricao-section-sobre {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -491,6 +516,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    font-size: 1rem;
   }
 
   .container-horarios {
