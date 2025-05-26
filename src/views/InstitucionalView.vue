@@ -1,5 +1,18 @@
 <script setup>
 import { useTemaStore } from '../stores/tema';
+import { useAcessibilidadeStore } from '@/stores/acessibilidade'
+import { computed, onMounted } from 'vue'
+
+const acessibilidadeStore = useAcessibilidadeStore()
+
+onMounted(() => {
+  acessibilidadeStore.aplicarFonteSalva()
+})
+const textoBotao = computed(() => {
+  const nivel = acessibilidadeStore.indiceAtual
+  const exibicao = nivel === 3 ? 1 : nivel + 1
+  return `Aa(${exibicao}/3)`
+})
 
 const temaStore = useTemaStore()
 
