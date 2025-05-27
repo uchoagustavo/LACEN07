@@ -1,0 +1,22 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PROTEÇÃO CONTRA OVERFLOW */
+html, body {
+  width: 100%;
+  height: 100%;          /* ← ADICIONE ISSO */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* IMAGENS E VÍDEOS RESPONSIVOS */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
