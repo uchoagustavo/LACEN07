@@ -500,7 +500,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    font-size: 1rem;
   }
 
   .container-horarios {
@@ -529,7 +528,7 @@
   }
 
   .titulo-card {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     margin-bottom: 15px;
     line-height: 1.3;

@@ -1,4 +1,3 @@
-// src/stores/acessibilidade.js
 import { defineStore } from 'pinia'
 
 export const useAcessibilidadeStore = defineStore('acessibilidade', {
