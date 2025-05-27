@@ -343,6 +343,7 @@
 
   .card .img-logo {
     margin-left: 100px;
+    position: static;
   }
 
   .cabecalho-noticias {
@@ -639,7 +640,7 @@
     }
 
     .card .img-logo {
-      margin-left: auto;
+      margin-left: 70px;
       margin-right: auto;
     }
 
@@ -657,7 +658,10 @@
     }
 
     .titulo {
-      text-align: center;
+    text-align: left;
+    margin: 0;
+    padding-left: 1rem;
+    width: 100%;
     }
 
     .conteudo-container {
