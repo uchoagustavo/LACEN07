@@ -296,3 +296,12 @@
   },
 };
 </script>
+
+<style>
+.dark-theme .header{
+  color: #E0E0E0;
+  background-color: #0D1B2A;
+  border-radius: 4px;
+  padding: 10px;
+}
+</style>

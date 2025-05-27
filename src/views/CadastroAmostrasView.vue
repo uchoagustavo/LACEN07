@@ -1,31 +1,23 @@
-<script>
-  import Libras from '@/components/Libras.vue'
-  import Triatomineo from '@/components/amostras/Triatomineo.vue'
-  import Escorpiao from '@/components/amostras/Escorpiao.vue'
-  import Caramujo from '@/components/amostras/Caramujo.vue'
-  import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
-  import Mosquito from '@/components/amostras/Mosquito.vue'
-  import MosquitoTeste from '@/components/amostras/MosquitoTeste.vue'
-  import Larva from '@/components/amostras/Larva.vue'
+<script setup>
+import { ref } from 'vue'
+import Libras from '@/components/Libras.vue'
+import Triatomineo from '@/components/amostras/Triatomineo.vue'
+import Escorpiao from '@/components/amostras/Escorpiao.vue'
+import Caramujo from '@/components/amostras/Caramujo.vue'
+import LaminasPCE from '@/components/amostras/LaminasPCE.vue'
+import Mosquito from '@/components/amostras/Mosquito.vue'
+import MosquitoTeste from '@/components/amostras/MosquitoTeste.vue'
+import Larva from '@/components/amostras/Larva.vue'
 
-  export default {
-    name: 'CadastroAmostras',
-    components: {
-      Libras,
-      Triatomineo,
-      Escorpiao,
-      Caramujo,
-      LaminasPCE,
-      Mosquito,
-      MosquitoTeste,
-      Larva
-    },
-    data() {
-      return {
-        selected: 'TRIATOMÍNEO'
-      }
-    }
-  }
+import { useTemaStore } from '@/stores/tema'
+
+const temaStore = useTemaStore()
+function alternarTema() {
+  temaStore.alternarTema()
+}
+
+
+const selected = ref('TRIATOMÍNEO')
 </script>
 
 
@@ -118,16 +110,16 @@
 
 <style>
   a {
-    color: inherit; /* herda a cor do pai */
-    text-decoration: none; /* remove o sublinhado */
+    color: inherit; 
+    text-decoration: none; 
   }
 
   a:visited {
-    color: inherit; /* mesma cor para links visitados */
+    color: inherit; 
   }
 
   a:hover {
-    color: inherit; /* evita alteração de cor no hover */
+    color: inherit; 
   }
 
     *{
@@ -142,6 +134,14 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .dark-theme .menu{
+    background-color: #0A3C79;
+  }
+
+  .dark-theme main{
+    background-color: #1B263B;
+  }
   .icone-bars{
     margin-left: 15px;
     margin-top: 10px;
@@ -151,6 +151,7 @@
     background-size: cover;
     border-radius: 50px;
   }
+
   .contatos-menu{
     display: flex;
     gap: 20px;
@@ -177,6 +178,10 @@
     background-color: #0A3C79;
     height: 200px;
     margin-top: 100px;
+  }
+
+  .dark-theme .azul-bar{
+    background-color: #001F3F;
   }
 
   .titulo-amostras{
@@ -213,8 +218,17 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
+  .dark-theme .inseto-button{
+    background-color: #121212;
+    color: #CCCCCC;
+  }
+
   .inseto-button:hover:not(.active){
     background-color: #f3f4f6;
+  }
+  
+  .dark-theme .inseto-button:hover:not(.active){
+    background-color: #002244;
   }
 
   .inseto-button.active {
@@ -222,7 +236,10 @@
     color: white;
   }
 
-  /* Variáveis CSS para facilitar manutenção */
+  .dark-theme .inseto-button.active{
+    background-color: #001F3F;
+  }
+ 
   :root {
     --primary-color: #0277bd;
     --secondary-color: #58a5f0;
@@ -290,6 +307,9 @@
     box-shadow: var(--box-shadow);
   }
 
+  .dark-theme .capture-form{
+    background-color: #0D1B2A;
+  }
   /* Classes para definir largura dos elementos no grid */
   .span-4 {
     grid-column: span 4;
@@ -317,6 +337,18 @@
     margin-bottom: var(--spacing-xs);
     font-weight: 500;
     font-size: 0.9rem;
+  }
+
+  .dark-theme label{
+    color: #E0E0E0;
+  }
+
+  .dark-theme input{
+    background-color: #E0E0E0;
+  }
+
+  .dark-theme select{
+    background-color: #E0E0E0;
   }
 
   input[type="text"],

@@ -1,3 +1,4 @@
+
 <template>
   <div class="capture-sheet">
     <div class="header">
@@ -543,6 +544,11 @@ function submitForm() {
     color: var(--text-color);
   }
 
+  .dark-theme .capture-sheet{
+    background-color: #0D1B2A;
+    color: #E0E0E0;
+  }
+
   .header {
     background-color: var(--background-color);
     padding: 10px;
@@ -557,11 +563,19 @@ function submitForm() {
     font-weight: 600;
   }
 
+  .dark-theme .header h2{
+    color: #E0E0E0;
+  }
+
   .observation {
     font-size: 12px;
     color: #000000;
     opacity: 0.7;
     text-align: right;
+  }
+
+  .dark-theme .observation{
+    background-color: #E0E0E0;
   }
 
   .form-grid {
@@ -617,6 +631,7 @@ function submitForm() {
     font-size: 12px;
     color: #000000;
   }
+  
 
   .grid-cell input,
   .grid-cell select {
@@ -668,6 +683,10 @@ function submitForm() {
     color: #000000;
   }
 
+  .dark-theme .inline-group label{
+    color: #E0E0E0;
+  }
+
   .form-footer {
     display: flex;
     justify-content: space-between;
@@ -680,6 +699,10 @@ function submitForm() {
     font-size: 12px;
     color: #000000;
     opacity: 0.7;
+  }
+
+  .dark-theme .page-info{
+    background-color: #E0E0E0;
   }
 
   .nav-buttons {
@@ -765,6 +788,9 @@ function submitForm() {
     animation: fadeIn 0.3s ease;
   }
 
+  .dark-theme label{
+    color: #E0E0E0;
+  }
   @keyframes fadeIn {
     from {
       opacity: 0;
