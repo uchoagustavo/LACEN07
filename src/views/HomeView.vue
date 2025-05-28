@@ -256,6 +256,10 @@
     padding: 0;
   }
 
+  .dark-theme .quem-somos h4{
+    color: #e3e3e3;
+  }
+
   .quem-somos-info {
     display: flex;
     align-items: center;
@@ -279,6 +283,9 @@
     /* Impede que o texto quebre a linha */
   }
 
+  .dark-theme .quem-somos-lacen+h4{
+    color: #e3e3e3;
+  }
 
   /* Container Padrão */
   .container {

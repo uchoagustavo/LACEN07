@@ -1,5 +1,19 @@
 <script setup>
 import { useTemaStore } from '../stores/tema';
+import { useAcessibilidadeStore } from '@/stores/acessibilidade'
+import { ref, computed, onMounted } from 'vue'
+
+const acessibilidadeStore = useAcessibilidadeStore()
+
+  onMounted(() => {
+    acessibilidadeStore.aplicarFonteSalva()
+  })
+
+  const textoBotao = computed(() => {
+    const nivel = acessibilidadeStore.indiceAtual
+    const exibicao = nivel === 3 ? 1 : nivel + 1
+    return `Aa(${exibicao}/3)`
+  })
 
 const temaStore = useTemaStore()
 
@@ -150,11 +164,14 @@ function alternarTema() {
   .rodape .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-direction: column;
+    
   }
 
   .institucional,
