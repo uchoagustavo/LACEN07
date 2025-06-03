@@ -21,20 +21,45 @@ import { computed, onMounted } from 'vue'
   function alternarTema() {
     temaStore.alternarTema()
   }
+import { ref } from 'vue'
+
+const mostrarMenu = ref(false)
+
+const submenus = ref({
+  institucional: false,
+  amostras: false
+})
+
+function toggleSubmenu(item) {
+  submenus.value[item] = !submenus.value[item]
+}
+
+
 </script>
 
 
 <template>
   <nav class="menu">
+    <button class="hamburguer" @click="mostrarMenu = !mostrarMenu" aria-label="Abrir menu">
+    ☰
+    </button>
     <!-- ESQUERDA: Logo -->
     <div class="logo-inicial">
       <router-link to="/">
         <picture>
-          <source media="(max-width: 455px)" srcset="/assets/img/logo_FSPH_PEQUENA.png" />
-          <img class="img-logo" src="/assets/img/logo_FSPH_GOVSE.png" alt="Logo" />
+          <source media="(max-width: 455px)" srcset="../../public/assets/img/logo-FSPH-lacen-branco.png" />
+          <img class="img-logo" src="../../public/assets/img/logo-FSPH-lacen-branco.png" alt="Logo" />
         </picture>
       </router-link>
     </div>
+      <div class="logo-secundaria">
+    <router-link to="/">
+      <picture>
+        <source media="(max-width: 455px)" srcset="../../public/assets/img/logogovernobranco.png"/>
+        <img class="img-logo" src="../../public/assets/img/logogovernobranco.png" alt="Outra Logo" />
+      </picture>
+    </router-link>
+  </div>
 
     <!-- CENTRO: Menu -->
     <div class="menu-links" id="menu-links-cima">
@@ -76,21 +101,17 @@ import { computed, onMounted } from 'vue'
             <img class="img-contato" src="/assets/img/instagram (1).svg" alt="Instagram" />
           </a>
         </li>
-        <li class="infos-header">
-          <a href="https://www.facebook.com/fsph.se/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <img class="img-contato" src="/assets/img/facebook_Icone.svg" alt="Facebook" />
-          </a>
-        </li>
-        <li class="infos-header">
-          <a href="https://linkedin.com/in/seulinkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img class="img-contato" src="/assets/img/IN_Icone.svg" alt="LinkedIn" />
+        <li class="telefone-contato">
+          <a href="tel:+557932346000" aria-label="Telefone">
+            <img class="img-contato" src="../../public/assets/img/telephone-fill.png" alt="Telefone" />
+            <span class="numero-telefone">(79) 3234-6007</span>
           </a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <nav class="menu-links" id="menu-links-baixo">
+  <nav class="menu-links" :class="{ 'ativo': mostrarMenu }" id="menu-links-baixo">
     <ul class="menu-inicial">
       <li class="dropdown">
         <a href="#">Institucional</a>
@@ -110,6 +131,44 @@ import { computed, onMounted } from 'vue'
       </li>
     </ul>
   </nav>
+
+  <!-- MENU MOBILE (hambúrguer) -->
+<nav class="menu-links-mobile" :class="{ 'ativo': mostrarMenu }">
+  <ul class="mobile-menu">
+
+    <!-- Item: Institucional -->
+    <li>
+      <div @click="toggleSubmenu('institucional')" class="menu-item">
+        <span class="seta" :class="{ aberto: submenus.institucional }">▸</span>
+        Institucional
+      </div>
+      <ul v-if="submenus.institucional" class="submenu aberta">
+        <li><a href="#">Atividades</a></li>
+        <li><a href="#">Estrutura Administrativa</a></li>
+      </ul>
+    </li>
+
+    <!-- Item: Notícias -->
+    <li><a href="#">Notícias</a></li>
+
+    <!-- Item: Profissionais -->
+    <li><a href="#">Profissionais</a></li>
+
+    <!-- Item: Amostras -->
+    <li>
+      <div @click="toggleSubmenu('amostras')" class="menu-item">
+        <span class="seta" :class="{ aberto: submenus.amostras }">▸</span>
+        Amostras
+      </div>
+      <ul v-if="submenus.amostras" class="submenu aberta">
+        <li><a href="#">Envio de Amostras</a></li>
+        <li><a href="#">Acompanhar Análises</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
 </template>
 
 
@@ -135,7 +194,19 @@ body.dark-theme .menu {
 .img-logo {
   height: 50px;
   width: auto;
+  transform: translateY(-3px);
 }
+.logo-secundaria {
+  display: flex;
+  align-items: center;
+}
+
+.logo-secundaria .img-logo {
+  height: 60px; 
+  width: auto;
+  transform: translateY(-3px);
+}
+
 
 /* ========== LINKS CENTRAIS ========== */
 .menu-links {
@@ -222,6 +293,7 @@ body.dark-theme .menu {
   transition: background-color 0.3s ease;
   font-size: 0;
   position: relative;
+  
 }
 .botao-tema::before {
   content: "";
@@ -248,15 +320,18 @@ body.dark-theme .botao-tema::before {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: #028fcc; /* cor do submenu */
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 25px;
   min-width: 180px;
+  margin: 0;
   z-index: 1000;
+
+  /* estado inicial - submenu oculto */
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
+
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .submenu li a {
@@ -273,6 +348,103 @@ body.dark-theme .botao-tema::before {
   transform: translateY(0);
   pointer-events: auto;
 }
+.hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-links-mobile {
+  display: none;
+}
+
+.menu-links-desktop ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-links-desktop li {
+  position: relative;
+}
+
+.menu-links-desktop a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.submenu-desktop {
+  display: none;
+  position: absolute;
+  background-color: #017bb6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .submenu-desktop {
+  display: block;
+}
+
+.submenu-desktop li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.seta {
+  transition: transform 0.3s ease;
+}
+
+.seta.aberto {
+  transform: rotate(90deg); /* muda de ▸ para ▾ */
+}
+
+
+
+.submenu li {
+  padding: 8px 0;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Transição suave ao exibir submenu */
+.submenu[style*="display: block"] {
+  display: block;
+  animation: aparecer 0.2s ease-in-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* ========== RESPONSIVIDADE (TELAS PEQUENAS) ========== */
   @media (max-width: 1012px) {
@@ -333,8 +505,138 @@ body.dark-theme .botao-tema::before {
       padding-right: 10px;
       padding-left: 10px;
     }
+    .menu-inicial {
+      display: none;
+    }
+    .telefone-contato {
+      display: none;
+    }
+    .aumento-letras {
+      display:none;
+    }
+    .botao-tema {
+      display: none;
+    }
+    nav.menu {
+    display: flex;
+    justify-content: flex-end; /* joga tudo para a direita */
+    align-items: center;
+    gap: 10px; /* espaço entre as duas logos */
+    padding-right: 10px; /* espaço da borda direita */
+    
+    }
 
+    .logo-inicial,
+    .logo-secundaria {
+    display: inline-flex; /* para ficarem lado a lado */
+    margin-top: 5px;
+    }
+
+  .logo-inicial img {
+    height: 50px; /* tamanho da logo inicial */
+    width: auto;
+    display: block;
   }
+
+  .logo-secundaria img {
+    height: 31px; /* tamanho da logo secundária, menor que a inicial */
+    width: auto;
+    display: block;
+  }
+    .hamburguer {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .menu-links-desktop {
+    display: none;
+  }
+
+  .menu-links-mobile {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #017bb6;
+    z-index: 1500;
+  }
+
+  .menu-links-mobile.ativo {
+    display: block;
+  }
+
+  .mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu > li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    color: white;
+  }
+
+  .mobile-menu > li > span,
+  .mobile-menu > li > a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  .submenu {
+    list-style: none;
+    padding-left: 15px;
+    background-color: #028fcc;
+  }
+
+  .submenu li {
+    padding: 8px 10px;
+  }
+
+  .submenu li a {
+    color: white;
+    text-decoration: none;
+  }
+  .submenu.aberta {
+  display: block;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+.menu-links-mobile .submenu.aberta {
+  background-color: #028fcc;
+  padding: 0 15px;
+  margin-left: 20px;
+  border-left: 2px solid #fff;
+  animation: aparecer 0.3s ease;
+}
+.menu-links-mobile .submenu {
+  position: static; /* ou relative */
+  top: auto;
+  left: auto;
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  padding-left: 15px;
+  background-color: #028fcc;
+  margin-left: 20px;
+  border-left: 2px solid #fff;
+  animation: aparecer 0.3s ease;
+}
+
+.menu-links-mobile .submenu.aberta li a {
+  color: white;
+  padding: 10px 0;
+  display: block;
+}
+
+    }
+
+  
 
   @media (max-width: 380px) {
     .menu-inicial a {
@@ -361,4 +663,6 @@ body.dark-theme .botao-tema::before {
     }
   }
 </style>
+
+
 
