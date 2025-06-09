@@ -72,7 +72,7 @@ function toggleSubmenu(item) {
           </ul>
         </li>
         <li><router-link to="/noticias">Notícias</router-link></li>
-        <li><a href="#">Profissionais</a></li>
+        <li><router-link to="/profissionais">Profissionais</router-link></li>
         <li class="dropdown">
           <a href="#">Amostras</a>
           <ul class="submenu">
@@ -121,7 +121,7 @@ function toggleSubmenu(item) {
         </ul>
       </li>
       <li><router-link to="/noticias">Notícias</router-link></li>
-      <li><a href="#">Profissionais</a></li>
+      <li><router-link to="/profissionais">Profissionais</router-link></li>
       <li class="dropdown">
         <a href="#">Amostras</a>
         <ul class="submenu">
