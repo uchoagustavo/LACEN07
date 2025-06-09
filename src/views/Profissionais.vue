@@ -107,7 +107,8 @@ export default {
   height: 100px;
   border-radius: 50%;
   background: white;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto; 
+  display: block; 
 }
 
 .card h3 {
