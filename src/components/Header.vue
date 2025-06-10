@@ -47,18 +47,12 @@ function toggleSubmenu(item) {
     <div class="logo-inicial">
       <router-link to="/">
         <picture>
-          <source media="(max-width: 455px)" srcset="../../assets/img/logo-FSPH-lacen-branco.png" />
+          <source media="(max-width: 590px)" srcset="../../assets/img/logo-FSPH-lacen-branco.png" />
           <img class="img-logo" src="../../assets/img/logo-FSPH-lacen-branco.png" alt="Logo" />
         </picture>
       </router-link>
     </div>
       <div class="logo-secundaria">
-    <router-link to="/">
-      <picture>
-        <source media="(max-width: 455px)" srcset="../../assets/img/logogovernobranco.png"/>
-        <img class="img-logo" src="../../assets/img/logogovernobranco.png" alt="Outra Logo" />
-      </picture>
-    </router-link>
   </div>
 
     <!-- CENTRO: Menu -->
@@ -429,7 +423,7 @@ body.dark-theme .botao-tema::before {
 
 
 /* ========== RESPONSIVIDADE (TELAS PEQUENAS) ========== */
-  @media (max-width: 1012px) {
+  @media (max-width: 961px) {
     .menu {
       flex-wrap: nowrap;
     }
@@ -491,12 +485,6 @@ body.dark-theme .botao-tema::before {
       display: none;
     }
     .telefone-contato {
-      display: none;
-    }
-    .aumento-letras {
-      display:none;
-    }
-    .botao-tema {
       display: none;
     }
 

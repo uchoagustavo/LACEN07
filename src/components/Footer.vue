@@ -11,11 +11,11 @@ function alternarTema() {
 <template >
   <footer class="rodape">
     <div class="container">
-      
+
       <div class="coluna">
         <div class="grupo-logos">
-          <img class="logo-footer" src="../../public/assets/img/logo-FSPH-lacen-branco.png" alt="Logo FSPH" />
-          <img class="logo-direita" src="../../public/assets/img/logogovernobranco.png" alt="Logo à direita" />
+          <img class="logo-footer" src="../../assets/img/logo-FSPH-lacen-branco.png" alt="Logo FSPH" />
+          <img class="logo-direita" src="../../assets/img/logogovernobranco.png" alt="Logo à direita" />
         </div>
         <p class="descricao">
           Fundação de Saúde Parreiras Horta<br />
@@ -48,15 +48,6 @@ function alternarTema() {
           <p>Telefone: +55 (79) 3234-6007</p>
         </div>
       </div>
-
-      <div class="coluna">
-        <h2>Links Úteis</h2>
-        <ul class="lista-links">
-          <li><a href="" target="_blank">Whatsapp</a></li>
-          <li><a href="" target="_blank">@lacens ergipe</a></li>
-          <li><a href="">Política de Privacidade</a></li>
-        </ul>
-      </div>
     </div>
   </footer>
 </template>
@@ -84,8 +75,8 @@ function alternarTema() {
 .coluna {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  overflow: visible; 
+  align-items: flex-start;
+  overflow: visible;
 }
 
 .coluna h2 {
@@ -102,8 +93,8 @@ function alternarTema() {
 }
 
 .logo-footer {
-  width: 120px; 
-  height: auto; 
+  width: 120px;
+  height: auto;
   margin-left: -10px;
 }
 
@@ -114,8 +105,8 @@ function alternarTema() {
 .grupo-logos {
   display: flex;
   align-items: center;
-  gap: 10px; 
-  margin-bottom: 8px; 
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
 .endereco,
@@ -151,7 +142,7 @@ function alternarTema() {
 .descricao {
   white-space: nowrap;
   overflow: hidden;
-  padding-left: 3px; 
+  padding-left: 3px;
 }
 
 .logo-footer{
@@ -219,7 +210,7 @@ function alternarTema() {
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
-    /*text-align: center;*/ 
+    /*text-align: center;*/
 
   }
 
