@@ -185,7 +185,7 @@ body.dark-theme .menu {
 }
 
 .logo-secundaria .img-logo {
-  height: 60px; 
+  height: 60px;
   width: auto;
   transform: translateY(-3px);
 }
@@ -276,7 +276,7 @@ body.dark-theme .menu {
   transition: background-color 0.3s ease;
   font-size: 0;
   position: relative;
-  
+
 }
 .botao-tema::before {
   content: "";
@@ -323,7 +323,7 @@ body.dark-theme .botao-tema::before {
   white-space: nowrap;
 }
 .submenu li a:hover {
-  color: #4288ce;
+  color: #000000;
   background: none;
 }
 .dropdown:hover .submenu {
@@ -506,7 +506,7 @@ body.dark-theme .botao-tema::before {
     align-items: center;
     gap: 10px; /* espaço entre as duas logos */
     padding-right: 10px; /* espaço da borda direita */
-    
+
     }
 
     .logo-inicial,
@@ -619,7 +619,7 @@ body.dark-theme .botao-tema::before {
 
     }
 
-  
+
 
   @media (max-width: 380px) {
     .menu-inicial a {
