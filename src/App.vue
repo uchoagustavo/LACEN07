@@ -3,6 +3,12 @@ import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import Libras from '@/components/Libras.vue';
 import { useTemaStore } from '@/stores/tema';
+import { useRoute } from 'vue-router'
+import { computed } from 'vue' // <-- ESSENCIAL
+
+const route = useRoute()
+
+const isLoginPage = computed(() => route.path === '/login')
 
 export default {
   name: 'App',
@@ -13,7 +19,7 @@ export default {
   },
   mounted() {
     const tema = useTemaStore();
-    tema.aplicarTemaSalvo(); 
+    tema.aplicarTemaSalvo();
   },
 };
 </script>
@@ -21,7 +27,7 @@ export default {
 
 <template>
   <div id="app">
-    <Header />
+    <Header v-if="$route.path !== '/login'" />
     <Libras />
     <main>
       <router-view />

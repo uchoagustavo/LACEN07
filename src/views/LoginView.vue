@@ -1,6 +1,7 @@
 <script>
 import Libras from '@/components/Libras.vue'
 
+
 export default {
   name: 'LoginView',
   components: {
@@ -19,7 +20,8 @@ export default {
       this.mensagemErro = '';
 
       if (this.username === 'admin' && this.password === 'admin') {
-        this.$router.push('/');
+        const redirectRoute = this.$route.query.redirect || '/'
+        this.$router.push(redirectRoute);
       } else {
         this.mensagemErro = 'Usuário ou senha incorretos.';
       }
@@ -29,6 +31,7 @@ export default {
     }
   }
 }
+
 </script>
 
 
@@ -69,8 +72,12 @@ export default {
 
 
 <style scoped>
-  /* Global Reset */
-  * {
+
+  Header {
+    display: none;
+  }
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

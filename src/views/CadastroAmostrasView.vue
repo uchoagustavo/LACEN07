@@ -71,13 +71,6 @@ const selected = ref('TRIATOMÍNEO')
         >
           LARVA
         </button>
-        <button
-          class="inseto-button"
-          :class="{ active: selected === 'MOSQUITOTESTE' }"
-          @click="selected = 'MOSQUITOTESTE'"
-        >
-          MOSQUITO (TESTE DEV)
-        </button>
       </nav>
 
       <div class="conteudo">
@@ -99,9 +92,6 @@ const selected = ref('TRIATOMÍNEO')
         <div v-else-if="selected === 'LARVA'">
           <Larva />
         </div>
-        <div v-else-if="selected === 'MOSQUITOTESTE'">
-          <MosquitoTeste />
-        </div>
       </div>
     </div>
   </div>
@@ -110,16 +100,16 @@ const selected = ref('TRIATOMÍNEO')
 
 <style>
   a {
-    color: inherit; 
-    text-decoration: none; 
+    color: inherit;
+    text-decoration: none;
   }
 
   a:visited {
-    color: inherit; 
+    color: inherit;
   }
 
   a:hover {
-    color: inherit; 
+    color: inherit;
   }
 
     *{
@@ -226,7 +216,7 @@ const selected = ref('TRIATOMÍNEO')
   .inseto-button:hover:not(.active){
     background-color: #f3f4f6;
   }
-  
+
   .dark-theme .inseto-button:hover:not(.active){
     background-color: #002244;
   }
@@ -239,7 +229,7 @@ const selected = ref('TRIATOMÍNEO')
   .dark-theme .inseto-button.active{
     background-color: #001F3F;
   }
- 
+
   :root {
     --primary-color: #0277bd;
     --secondary-color: #58a5f0;

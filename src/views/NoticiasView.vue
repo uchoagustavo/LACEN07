@@ -22,14 +22,10 @@
 
   <div class="noticias-view">
     <div class="header-opcoes">
-      <h1 class="titulo-pagina">Notícias</h1>
-      <div class="botoes-view">
-        <button @click="modoGrade = true" :class="{ ativo: modoGrade }">Grade</button>
-        <button @click="modoGrade = false" :class="{ ativo: !modoGrade }">Lista</button>
-      </div>
+      <h1 class="titulo-pagina">NOTÍCIAS</h1>
     </div>
 
-    <div v-if="modoGrade" class="grid-container">
+    <div v-if="!modoGrade" class="grid-container">
       <div
         v-for="noticia in noticias"
         :key="noticia.id"
@@ -76,14 +72,15 @@
 
   .header-opcoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
   }
 
   .titulo-pagina {
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
+
   }
 
   .botoes-view button {
@@ -152,8 +149,8 @@
   }
 
   .img-lista {
-    width: 180px;
-    height: 120px;
+    width: 300px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     margin-right: 20px;
