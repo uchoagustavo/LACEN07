@@ -65,11 +65,7 @@ function toggleSubmenu(item) {
     <div class="menu-links" id="menu-links-cima">
       <ul class="menu-inicial">
         <li class="dropdown">
-          <a href="#">Institucional</a>
-          <ul class="submenu">
-            <li><a href="#">Atividades</a></li>
-            <li><a href="#">Estrutura Administrativa</a></li>
-          </ul>
+           <router-link to="/institucional">Institucional</router-link>
         </li>
         <li><router-link to="/noticias">Notícias</router-link></li>
         <li><router-link to="/profissionais">Profissionais</router-link></li>
@@ -114,11 +110,7 @@ function toggleSubmenu(item) {
   <nav class="menu-links" :class="{ 'ativo': mostrarMenu }" id="menu-links-baixo">
     <ul class="menu-inicial">
       <li class="dropdown">
-        <a href="#">Institucional</a>
-        <ul class="submenu">
-          <li><a href="#">Atividades</a></li>
-          <li><a href="#">Estrutura Administrativa</a></li>
-        </ul>
+        <router-link to="/institucional">Institucional</router-link>
       </li>
       <li><router-link to="/noticias">Notícias</router-link></li>
       <li><router-link to="/profissionais">Profissionais</router-link></li>
@@ -137,16 +129,7 @@ function toggleSubmenu(item) {
   <ul class="mobile-menu">
 
     <!-- Item: Institucional -->
-    <li>
-      <div @click="toggleSubmenu('institucional')" class="menu-item">
-        <span class="seta" :class="{ aberto: submenus.institucional }">▸</span>
-        Institucional
-      </div>
-      <ul v-if="submenus.institucional" class="submenu aberta">
-        <li><a href="#">Atividades</a></li>
-        <li><a href="#">Estrutura Administrativa</a></li>
-      </ul>
-    </li>
+    <li><a href="#">Institucional</a></li>
 
     <!-- Item: Notícias -->
     <li><a href="#">Notícias</a></li>
@@ -556,7 +539,7 @@ body.dark-theme .botao-tema::before {
 
   .menu-links-mobile {
     display: none;
-    position: absolute;
+    position: static;
     top: 60px;
     left: 0;
     width: 100%;

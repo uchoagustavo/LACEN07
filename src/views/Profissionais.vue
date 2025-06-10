@@ -1,6 +1,6 @@
 <script>
-import Header from '../components/Header.vue'; // Verifique o caminho correto para Header.vue
-import Footer from '../components/Footer.vue'; // Verifique o caminho correto para Footer.vue
+import Header from '../components/Header.vue'; 
+import Footer from '../components/Footer.vue'; 
 
 // Imagens
 import image1 from '@/assets/img/laborat-rio-de-biologia-molecular-1.png' // Fundo
@@ -36,7 +36,9 @@ export default {
           <p class="cargo">Diretor Geral Interino e Diretor Administrativo e Financeiro</p>
           <p>Graduado em Gestão Pública pela Faculdade Estácio, possui experiência na gestão estadual e municipal, atuando em cargos de coordenação e planejamento.</p>
           <p><strong>Competências:</strong> Auxílio à Diretoria-Geral, gerência de recursos, planejamento financeiro e compras da FSPH, além de apoiar a administração do HEMOSE, LACEN/SE e Serviço de Verificação de Óbitos.</p>
-          <button>Conheça mais</button>
+          <router-link to="/competencias">
+            <button>Conheça mais</button>
+          </router-link>
         </div>
 
         <div class="card">
