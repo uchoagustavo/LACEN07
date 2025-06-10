@@ -66,7 +66,7 @@ function toggleSubmenu(item) {
         <li class="dropdown">
           <a href="#">Amostras</a>
           <ul class="submenu">
-            <li><router-link to="/cadastro-amostras">Envio de Amostras</router-link></li>
+          <li><router-link :to="{ name: 'Login', query: { redirect: 'cadastro-amostras' } }">Envio de Amostras</router-link></li>
             <li><a href="#">Acompanhar Análises</a></li>
           </ul>
         </li>
@@ -111,7 +111,7 @@ function toggleSubmenu(item) {
       <li class="dropdown">
         <a href="#">Amostras</a>
         <ul class="submenu">
-          <li><router-link to="/cadastro-amostras">Envio de Amostras</router-link></li>
+          <li><router-link :to="{ name: 'Login', query: { redirect: 'cadastro-amostras' } }">Envio de Amostras</router-link></li>
           <li><a href="#">Acompanhar Análises</a></li>
         </ul>
       </li>
