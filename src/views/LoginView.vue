@@ -1,32 +1,37 @@
 <script>
-  import Libras from '@/components/Libras.vue'
+import Libras from '@/components/Libras.vue'
 
-  export default {
-    name: 'LoginView',
-    components: {
-      Libras,
-    },
-    data() {
-      return {
-        username: '',
-        password: '',
-        mostrarSenha: false
-      };
-    },
-    methods: {
-      verificarLogin() {
-        if (this.username === 'root' && this.password === 'root') {
-          this.$router.push('/');
-        } else {
-          alert('Usuário ou senha incorretos.');
-        }
-      },
-      alternarVisibilidade() {
-        this.mostrarSenha = !this.mostrarSenha;
+export default {
+  name: 'LoginView',
+  components: {
+    Libras,
+  },
+  data() {
+    return {
+      username: '',
+      password: '',
+      mostrarSenha: false,
+      mensagemErro: ''
+    };
+  },
+  methods: {
+    verificarLogin() {
+      this.mensagemErro = '';
+
+      if (this.username === 'admin' && this.password === 'admin') {
+        this.$router.push('/');
+      } else {
+        this.mensagemErro = 'Usuário ou senha incorretos.';
       }
+    },
+    alternarVisibilidade() {
+      this.mostrarSenha = !this.mostrarSenha;
     }
   }
+}
 </script>
+
+
 
 
 <template>
@@ -49,6 +54,7 @@
         <a href="#" class="forgot-password">Esqueceu sua senha?</a>
 
         <button type="submit" class="login-button">Login</button>
+        <p v-if="mensagemErro" class="mensagem-erro">{{ mensagemErro }}</p>
       </form>
     </div>
 
@@ -193,6 +199,14 @@
   .login-button:hover {
     background-color: #0291D3;
   }
+
+  .mensagem-erro {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 40px;
+  }
+
 
   .right-side {
     width: 300px;
