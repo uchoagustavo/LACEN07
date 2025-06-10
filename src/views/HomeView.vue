@@ -256,6 +256,10 @@
     padding: 0;
   }
 
+    .dark-theme .quem-somos h4{
+    color: white;
+  }
+
   .quem-somos-info {
     display: flex;
     align-items: center;

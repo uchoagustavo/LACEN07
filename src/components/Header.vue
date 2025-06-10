@@ -165,6 +165,10 @@ body.dark-theme .menu {
   background-color: #102d53;
 }
 
+body.dark-theme .submenu{
+  background-color: #102d53
+}
+
 .logo-inicial {
   flex-shrink: 0;
 }
@@ -221,6 +225,11 @@ body.dark-theme .menu {
 }
 .menu-inicial li a:hover {
   color: #003366;
+  background: none;
+}
+
+body.dark-theme .menu-inicial li a:hover {
+  color: #b9c3ff;
   background: none;
 }
 
@@ -316,9 +325,15 @@ body.dark-theme .botao-tema::before {
   white-space: nowrap;
 }
 .submenu li a:hover {
-  color: #000000;
+  color: #333;
   background: none;
 }
+
+body.dark-theme .submenu li a:hover {
+  color: #b9c3ff;
+  background: none;
+}
+
 .dropdown:hover .submenu {
   opacity: 1;
   transform: translateY(0);
