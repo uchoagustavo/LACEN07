@@ -256,8 +256,8 @@
     padding: 0;
   }
 
-  .dark-theme .quem-somos h4{
-    color: #e3e3e3;
+    .dark-theme .quem-somos h4{
+    color: white;
   }
 
   .quem-somos-info {

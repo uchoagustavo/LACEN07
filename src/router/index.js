@@ -5,6 +5,8 @@ import LoginView from '@/views/LoginView.vue'
 import NoticiaDetalhe from '@/views/NoticiaDetalhe.vue'
 import CadastroAmostras from '@/views/CadastroAmostrasView.vue'
 import InstitucionalView from '@/views/InstitucionalView.vue'
+import Profissionais from '@/views/Profissionais.vue'
+import Competências from '@/views/Competências.vue'
 
 const routes = [
   {
@@ -42,7 +44,19 @@ const routes = [
     path: '/institucional',
     name: 'Institucional',
     component: InstitucionalView
-  }
+  },
+
+  {
+    path: '/profissionais', 
+    name: 'Profissionais', 
+    component: Profissionais 
+  },
+
+  {
+    path: '/competencias',
+    name: 'Competências',
+    component: Competências
+  },
 
 ]
 
