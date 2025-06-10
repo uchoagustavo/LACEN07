@@ -47,16 +47,16 @@ function toggleSubmenu(item) {
     <div class="logo-inicial">
       <router-link to="/">
         <picture>
-          <source media="(max-width: 455px)" srcset="../../public/assets/img/logo-FSPH-lacen-branco.png" />
-          <img class="img-logo" src="../../public/assets/img/logo-FSPH-lacen-branco.png" alt="Logo" />
+          <source media="(max-width: 455px)" srcset="../../assets/img/logo-FSPH-lacen-branco.png" />
+          <img class="img-logo" src="../../assets/img/logo-FSPH-lacen-branco.png" alt="Logo" />
         </picture>
       </router-link>
     </div>
       <div class="logo-secundaria">
     <router-link to="/">
       <picture>
-        <source media="(max-width: 455px)" srcset="../../public/assets/img/logogovernobranco.png"/>
-        <img class="img-logo" src="../../public/assets/img/logogovernobranco.png" alt="Outra Logo" />
+        <source media="(max-width: 455px)" srcset="../../assets/img/logogovernobranco.png"/>
+        <img class="img-logo" src="../../assets/img/logogovernobranco.png" alt="Outra Logo" />
       </picture>
     </router-link>
   </div>
@@ -99,7 +99,7 @@ function toggleSubmenu(item) {
         </li>
         <li class="telefone-contato">
           <a href="tel:+557932346000" aria-label="Telefone">
-            <img class="img-contato" src="../../public/assets/img/telephone-fill.png" alt="Telefone" />
+            <img class="img-contato" src="../../assets/img/telephone-fill.png" alt="Telefone" />
             <span class="numero-telefone">(79) 3234-6007</span>
           </a>
         </li>
@@ -500,7 +500,8 @@ body.dark-theme .botao-tema::before {
     .botao-tema {
       display: none;
     }
-    nav.menu {
+
+     nav.menu {
     display: flex;
     justify-content: flex-end; /* joga tudo para a direita */
     align-items: center;
