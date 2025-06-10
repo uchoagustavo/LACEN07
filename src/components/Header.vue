@@ -310,7 +310,6 @@ body.dark-theme .botao-tema::before {
   margin: 0;
   z-index: 1000;
 
-  /* estado inicial - submenu oculto */
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
