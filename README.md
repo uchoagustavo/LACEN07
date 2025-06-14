@@ -33,7 +33,7 @@ Siga os passos abaixo para executar o projeto localmente:
 
 ```bash
 # 🔽 Clone o repositório
-git clone https://github.com/seu-usuario/LACEN07.git
+git clone https://github.com/uchoagustavo/LACEN07.git
 
 # 📂 Acesse o diretório do projeto
 cd LACEN07
